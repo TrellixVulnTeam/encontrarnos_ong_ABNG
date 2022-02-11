@@ -1,1 +1,1 @@
-    <h4><?php the_field('puesto_laboral'); ?></h4>
+    <p class= "card__subtitle"><?php the_field('puesto_laboral'); ?></p>

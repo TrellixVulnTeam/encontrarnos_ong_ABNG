@@ -30,9 +30,11 @@ get_header();
 			while ( have_posts() ) : the_post();?>
 			<div class="card">
 			<img src="<?php the_post_thumbnail_url(); ?>" class="card__img"></img>
-			<a href= <?php the_permalink(); ?>><h2> <?php the_title();?> </h2></a>
-			<?php get_template_part( './src/custom-parts/template', 'acf_equipo' );
-			the_excerpt();?>
+			<a href= <?php the_permalink(); ?>><h5 class= "card__title"> <?php the_title();?> </h5></a>
+			<div class="text-wrapper">
+			<?php get_template_part( './src/custom-parts/template', 'acf_equipo' );?>
+			<p class= "card__text"><?php the_excerpt(); ?> </p>
+			</div>
 			</div>
 			<?php endwhile;
 			the_posts_navigation();

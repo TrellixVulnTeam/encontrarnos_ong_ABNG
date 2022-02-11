@@ -1,36 +1,41 @@
-
-.title {
-    text-align: center;
-    &--left {
-        text-align: left;
-    }
-}
-
-.title__span {
-    border-left: 5px solid #FBD197;
-    padding-left: 10px;
-    &--green {
-        border-left: 5px solid #9DC8AA;
-        //padding-left: 10px;
-    }
-}
-
 .card-wrapper {
     @include flex(row, space-around, flex-start);
-    flex: wrap;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: auto;
+    width: 80%;
 }
 
 .card {
+    @include flex(column, center, center);
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
     margin: 1%;
     padding: 1%;
     border-radius: 28px;
     text-align: center;
-    width: 50%;
+    width: 30%;    
+
+    &__title{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    &__subtitle{
+        margin: 0;
+        padding: 0;
+    }
+    &__img{
+        padding: 15px;
+        width: 70%;
+        border-radius: 50%;
+    }
+    &__text{
+        margin: 0;
+        padding: 0;
+    }
 }
 
-.card__img {
-    width: 70%;
-    
-    border-radius: 50%;
+.text-wrapper {
+    width: 90%;
 }
+
