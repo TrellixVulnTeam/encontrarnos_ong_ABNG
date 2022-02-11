@@ -1,0 +1,43 @@
+.main-navigation ul {
+    margin-top: 2%;
+    justify-content: flex-end;
+    //@include flex(row, flex-end, center);
+}
+
+.menu  li {
+    margin-left: 10px;
+    font-family: $font-secondary;
+    font-weight: 500; 
+
+        a {
+            padding: 0.1rem 0.5rem;
+        
+        }
+    }
+
+    .li--accented a {
+        color: color(background);
+        border-radius:  250px;
+        background-color: color(accent);  
+        &:hover{
+            background-color: lighten(color(accent), 5%);  
+        }
+    }
+
+    .li--bold a {
+        font-weight: bold;
+    }
+
+.sub-menu {
+    transition: 0.3s;
+    @include flex(column, center, center);
+    padding: 0.5rem;
+    border-radius: 1%;
+    li a {
+        &:hover{
+            color: color(background);
+            background-color: color(primary);
+        }
+    }
+}
+

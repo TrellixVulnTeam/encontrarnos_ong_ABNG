@@ -1,0 +1,45 @@
+body{
+    background-color: color(background);    
+}
+
+.content-wrapper {
+    margin: auto;
+    width: 83%;
+}
+
+//TYPOGRAPHY
+
+%titles {
+    font-family: $font-primary;
+    font-size: font-size(title);
+    color: color(text);
+}
+
+%subtitles {
+    @extend %titles;
+    font-size: font-size(sub-title);
+}
+
+%sub-subtitles {
+    @extend %subtitles;
+    font-family: $font-secondary;
+    font-size: font-size(sub-sub-title);
+
+}
+
+h1{
+    @extend %titles;
+} 
+h3{
+    @extend %subtitles;
+}
+
+h5 {
+    @extend %sub-subtitles;
+}
+
+p {     
+    font-size: font-size(text);
+    color: color(text);
+}
+

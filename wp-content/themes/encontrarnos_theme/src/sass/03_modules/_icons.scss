@@ -1,0 +1,13 @@
+.bi {
+    color: color(background);
+    margin: 15px;
+    font-size: font-size(text);
+    &:hover{
+        transition: $link-transition;
+        color: darken(color(background), 5%);
+    }
+}
+
+.link-padding {
+    padding-right: 2%;
+}

@@ -1,0 +1,19 @@
+$font-primary: 'Playfair Display', serif;
+$font-secondary: 'Mukta', sans-serif;
+
+$font-sizes: (
+        title: 3.1rem,
+        sub-title: 2.3rem,
+        sub-sub-title: 1.8rem,
+        text: 1.6rem,
+        button-text: 1.5rem,
+        link: 1.25rem
+);
+
+@function font-size($fs){
+    @return map-get($font-sizes, $fs);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');

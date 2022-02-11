@@ -1,0 +1,11 @@
+a {
+    font-size: font-size(link);
+    color: color(text);
+    &:visited {
+        color: color(text);
+    }
+    &:hover{
+        transition: $link-transition;
+        color: lighten(color(text), 20%);
+    }
+}

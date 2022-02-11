@@ -1,0 +1,21 @@
+
+@import '00_variables/general';
+@import '00_variables/colors';
+@import '00_variables/typography';
+
+@import '01_mixins/mixins';
+
+@import '02_basics/base';
+@import '02_basics/buttons';
+@import '02_basics/links';
+
+@import '03_modules/modals';
+@import '03_modules/footer';
+@import '03_modules/navigation';
+@import '03_modules/header';
+@import '03_modules/cards';
+@import '03_modules/forms';
+@import '03_modules/icons';
+@import '03_modules/select';
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");

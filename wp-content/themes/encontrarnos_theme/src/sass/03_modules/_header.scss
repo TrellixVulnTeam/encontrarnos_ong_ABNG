@@ -1,0 +1,14 @@
+.header-bar {
+    background-color: color(primary);
+    height: 70px;
+    @include flex(row, flex-end, center);
+}
+
+header {
+    @include flex(row, center, flex-start);
+}
+
+img.custom-logo {
+    max-height: 218px;
+    max-width: 510px;
+}
