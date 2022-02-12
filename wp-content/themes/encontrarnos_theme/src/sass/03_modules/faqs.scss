@@ -1,0 +1,5 @@
+.question-wrapper{
+    @include flex(row, space-between, center);
+    font-family: $font-secondary;
+    font-size: font-size(text);
+}

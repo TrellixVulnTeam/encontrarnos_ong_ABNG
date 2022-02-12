@@ -146,6 +146,7 @@ function encontrarnos_theme_scripts() {
 
 	wp_enqueue_script( 'encontrarnos_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -213,7 +214,7 @@ function custom_post_type_faqs(){
 		'hierarchical' => false,
 		'public' => true, 
 		'has_archive' => true, 
-		'supports' => array('title', 'editor', 'excerpt', 'custom fields'),
+		'supports' => array('title', 'editor', 'custom fields'),
 		'' 
 	);
 
@@ -364,3 +365,7 @@ function mytheme_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+
+add_image_size('card-img', 200, 200, false);
+
+

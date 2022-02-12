@@ -38,7 +38,7 @@ h5 {
     @extend %sub-subtitles;
 }
 
-h6, p {     
+h6, p, li {     
     font-size: font-size(text);
     color: color(text);
 }

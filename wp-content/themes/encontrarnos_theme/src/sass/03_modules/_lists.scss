@@ -1,0 +1,16 @@
+.ul-mision__li{
+    list-style: none;
+    margin-bottom: 4%;
+    &::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: color(primary); /* Change the color */
+        font-weight: 800; /* If you want it to be bold */
+        font-size: font-size(sub-title);
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 0.7em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+    .li__span--bold{
+        font-weight: bold;
+    }
+}

@@ -11,26 +11,28 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'encontrarnos_theme' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'encontrarnos_theme' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
 
+			$tags = get_the_terms(get_post(), 'tipo-de-busqueda');
+			if($tags):
+			foreach($tags as $tag):?>
+			<a href= "<?php echo get_term_link($tag->term_id);
+			?>">
+			<?php echo $tag->name;?>
+			</a>
+			<?php endforeach;
+			endif;
 
 		endwhile; // End of the loop.
 		?>
 
-	</main><!-- #main -->
 
-	<p><?php the_field('respuesta'); ?></p>
+
+	</main><!-- #main -->
 
 <?php
 

@@ -6,8 +6,23 @@
         transition: $link-transition;
         color: darken(color(background), 5%);
     }
+    &-chevron-compact-down{
+        font-size: font-size(sub-title);
+        font-weight: 900;
+        color: color(text);
+        &:hover{
+            transition: $link-transition;
+            color: lighten(color(text), 10%);
+        }
+    }
+}
+
+details[open] > summary .bi-chevron-compact-down {
+    transform: rotate(180deg);
+    transition: $link-transition;
 }
 
 .link-padding {
     padding-right: 2%;
 }
+
