@@ -4,3 +4,11 @@
     justify-content: $jc;
     align-items: $ai;
 }
+
+@mixin grid($columns, $rows, $rgap, $cgap) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    grid-row-gap: $rgap;
+    grid-column-gap: $cgap;
+}

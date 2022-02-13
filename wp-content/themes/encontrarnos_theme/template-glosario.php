@@ -7,25 +7,21 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
 		<?php
 		while ( have_posts() ) :
 			the_post();
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
+			?>
+			<div class="table">
+			<h6 class= "table__title-1">Término</h6>
+			<h6 class= "table__title-2">Abreviatura</h6>
+			<h6 class= "table__title-3">Descripción</h6>
+			<?php get_template_part( './src/custom-parts/template', 'acf_glosario' );?> 
+			</div>       
+		<?php 
 		endwhile; // End of the loop.
 		?>
-
 	</main><!-- #main -->
 
-<?php
-get_footer();
-
-?>
+<?php get_footer(); ?>
 
 

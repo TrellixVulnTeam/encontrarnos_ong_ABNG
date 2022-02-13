@@ -27,6 +27,11 @@ body{
 
 }
 
+%sub-sub-subtitles {
+    @extend %sub-subtitles;
+    font-size: font-size(sub-sub-sub-title);
+}
+
 h1{
     @extend %titles;
 } 
@@ -38,7 +43,11 @@ h5 {
     @extend %sub-subtitles;
 }
 
-h6, p, li {     
+h6{
+    @extend %sub-sub-subtitles;
+}
+
+p, li {     
     font-size: font-size(text);
     color: color(text);
 }

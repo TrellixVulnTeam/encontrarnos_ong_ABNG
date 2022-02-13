@@ -11,22 +11,26 @@ body {
   width: 83%;
 }
 
-h1, h3, h5 {
+h1, h3, h5, h6 {
   font-family: "Playfair Display", serif;
   font-size: 3.1rem;
   color: #3A5743;
 }
 
-h3, h5 {
+h3, h5, h6 {
   font-size: 2.3rem;
 }
 
-h5 {
+h5, h6 {
   font-family: "Mukta", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
-h6, p, li {
+h6 {
+  font-size: 1.7rem;
+}
+
+p, li {
   font-size: 1.6rem;
   color: #3A5743;
 }
@@ -45,6 +49,52 @@ a:hover {
 
 .edit-link {
   display: none;
+}
+
+.table__item-3, .table__item-2, .table__item-1 {
+  padding: 1% 5%;
+  background-color: #FCFBEC;
+  border-radius: 6px;
+}
+
+.table {
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 0%;
+  grid-column-gap: 0%;
+  grid-template-areas: "title-1 title-2 title-3" "item-1 item-2 item-3";
+}
+.table__title-1 {
+  grid-area: "title-1";
+}
+.table__title-2 {
+  grid-area: "title-2";
+}
+.table__title-3 {
+  grid-area: "title-3";
+}
+.table__item-1 {
+  grid-area: "item-1";
+}
+.table__item-2 {
+  grid-area: "item-2";
+}
+.table__item-3 {
+  grid-area: "item-3";
+}
+
+.table > p:nth-child(6n+1) {
+  background-color: #FFFFFF;
+}
+
+.table > p:nth-child(6n+2) {
+  background-color: #FFFFFF;
+}
+
+.table > p:nth-child(6n+3) {
+  background-color: #FFFFFF;
 }
 
 .question-wrapper {

@@ -1,0 +1,46 @@
+%item {
+    padding:1% 5%;
+    background-color: color(odd);
+    border-radius: 6px;
+}
+
+.table{
+    max-height: 100%;
+    @include grid(repeat(3, 1fr), auto auto auto, 0%, 0%);
+    grid-template-areas:
+        "title-1 title-2 title-3"
+        "item-1 item-2 item-3";
+    &__title-1{
+        grid-area: "title-1";
+    }
+    &__title-2{
+        grid-area: "title-2";
+    }      
+    &__title-3{
+        grid-area: "title-3";
+        }
+    &__item-1{
+        @extend %item;
+        grid-area: "item-1";
+    }
+    &__item-2{
+        @extend %item;
+        grid-area: "item-2";
+    }
+    &__item-3{
+        @extend %item;
+        grid-area: "item-3";
+    }
+}
+
+//odd background
+
+.table >p:nth-child(6n+1) {
+    background-color: color(background);
+}
+.table >p:nth-child(6n+2) {
+    background-color: color(background);
+}
+.table >p:nth-child(6n+3) {
+    background-color: color(background);
+}
