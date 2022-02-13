@@ -244,7 +244,7 @@ function custom_post_type_organismos(){
 			'singular_name' => 'Organismo'
 		),
 		'menu_icon' => 'dashicons-networking',
-		'hierarchical' => false,
+		'hierarchical' => true,
 		'public' => true, 
 		'has_archive' => true, 
 		'supports' => array('title', 'editor', 'custom fields'),
@@ -259,8 +259,12 @@ add_action('init', 'custom_post_type_organismos');
 function organismos_taxonomy(){
 
 	$args = array(
-
+		'labels' => array(
+			'name' => 'Tipos de Organismos',
+			'singular_name' => 'Tipo de Organismo'
+		),
 		'public' => true, 
+		'hierarchical' => true,
 	);
 
 	register_taxonomy('tipos-de-organismo', array('organismos'), $args);

@@ -53,7 +53,8 @@ get_header();
 					<hr>
 			<?php	
 				endwhile;
-			endif; ?>
+			endif;
+			wp_reset_postdata(); ?>
 
 		<h5 class="title title--left title--mb-0">Sobre Tests y Matchs</h5>
 					<?php 
@@ -85,7 +86,8 @@ get_header();
 							<hr>
 					<?php	
 						endwhile;
-					endif; ?>
+					endif;
+					wp_reset_postdata(); ?>
 
 
 	</main><!-- #main -->
