@@ -7,25 +7,12 @@ get_header();
 
 	<?php while ( have_posts() ) : the_post(); ?>
 	<?php endwhile; ?>
+	
 
+<form>
+<select id= "select-organismos">
 
-<?php 
-			$args= array(
-				'post_type' => 'organismos',
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'tipos-de-organismo',
-						'field' => 'slug',
-						'terms' => array('ongs')
-
-					)
-				)
-			);
-			$_posts= new WP_Query($args);
-			
-		?>
-<select>
-<option value= "" selected>Selecciona una opción</option>
+<option selected>Selecciona una opción</option>
 <?php 
 $args = array(
     'taxonomy'               => 'tipos-de-organismo',
@@ -34,53 +21,43 @@ $args = array(
     'order'                  => 'ASC',
     'hide_empty'             => false,
 );
+
 $the_query = new WP_Term_Query($args);
 $parents_terms= $the_query->get_terms();
 foreach($the_query->get_terms() as $term){ 
 ?>
-    <option><?php echo $id = $term->name; ?></option>
+    <option value="<?php echo $term->term_id; ?> "><?php echo $term->name; ?></option>
 	
 <?php
 }
 ?>
 </select>
+</form>
 
+
+<form>
 <select>
 <option value= "" selected>Selecciona una Provincia</option>
+
 <?php 
-$args = array(
+$args2 = array(
     'taxonomy'               => 'tipos-de-organismo',
-    'orderby'                => 'term_order', 
-	'child_of'               => $parents_terms[2]->term_id,
+    'orderby'                => 'term_order',
     'order'                  => 'ASC',
     'hide_empty'             => false,
 );
-$the_query_2 = new WP_Term_Query($args);
-foreach($the_query_2->get_terms() as $term){ 
+$the_query_2 = new WP_Term_Query($args2);
+foreach($the_query_2->get_terms() as $termx){ 
 ?>
-    <option><?php echo $term->name; ?></option>
+    <option disabled><?php echo $termx->name; ?></option>
 	
 <?php
 }
 ?>
+
 </select>
-
-			<?php if($_posts->have_posts()): 
-				while ($_posts->have_posts()) : $_posts->the_post(); ?>
-<?php $terms = get_the_terms( $post->ID , 'tipos-de-organismo' ); ?>
-		<?php var_dump($terms) ?>
-	<select onchange="console.log(value);">
-	<?php foreach ( $terms as $term ) { ?>
-		<option value= "hola"> <?php  echo $term->name; ?> </option>	<?php } ?>
-	</select>
-
-
-		<?php	
-		endwhile;
-	endif;
-	wp_reset_postdata(); ?>
-
-	</main><!-- #main -->
+</form>
+</main><!-- #main -->
 
 <?php
 get_footer();

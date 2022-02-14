@@ -145,6 +145,7 @@ function encontrarnos_theme_scripts() {
 	wp_style_add_data( 'encontrarnos_theme-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'encontrarnos_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'encontrarnos_theme-main', get_template_directory_uri() . './src/js/main.js', array('jquery'), _S_VERSION, true );
 	
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -373,3 +374,11 @@ add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 add_image_size('card-img', 200, 200, false);
 
 
+//AJAX 
+
+add_action('wp_ajax_select', 'select_response');
+add_action('wp_ajax_nopriv_select', 'select_response');
+
+function select_response(){
+//aca manipulo la data 
+}
