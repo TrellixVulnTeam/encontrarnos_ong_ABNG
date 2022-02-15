@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'encontrarnos_theme_widgets_init' );
  */
 function encontrarnos_theme_scripts() {
 	wp_enqueue_style( 'underscores_theme_base-style', get_template_directory_uri() . './style.css', array(), _S_VERSION );
-	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . '/src/css/styles.css', array(), _S_VERSION );
+	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . './src/css/styles.css', array(), _S_VERSION );
 	
 	wp_style_add_data( 'encontrarnos_theme-style', 'rtl', 'replace' );
 
@@ -374,11 +374,3 @@ add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 add_image_size('card-img', 200, 200, false);
 
 
-//AJAX 
-
-add_action('wp_ajax_select', 'select_response');
-add_action('wp_ajax_nopriv_select', 'select_response');
-
-function select_response(){
-//aca manipulo la data 
-}

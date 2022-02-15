@@ -297,4 +297,16 @@ details[open] > summary .bi-chevron-compact-down {
   padding-right: 2%;
 }
 
+.__nacionales {
+  display: block;
+}
+
+.__provinciales {
+  display: none;
+}
+
+.__ongs {
+  display: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
