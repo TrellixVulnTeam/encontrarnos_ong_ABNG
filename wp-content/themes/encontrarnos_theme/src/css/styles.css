@@ -297,15 +297,11 @@ details[open] > summary .bi-chevron-compact-down {
   padding-right: 2%;
 }
 
-.__nacionales {
+.display--b {
   display: block;
 }
 
-.__provinciales {
-  display: none;
-}
-
-.__ongs {
+.display--n {
   display: none;
 }
 
