@@ -14,7 +14,7 @@ get_header();
 <div class= 'form-wrapper'>
 <h6 class= 'title title--left title--mb-0'>Organismos</h6>
 <form>
-<select id= "select-organismos">
+<select id= "select-organismos" class="select select--b">
 
 <option>Seleccionar</option>
 <?php 
@@ -60,7 +60,7 @@ $termz = get_term_by( 'id', $child, 'tipos-de-organismo' ); ?>
 
 <!-- SELECT PROVINCIAS -->
 <form>
-<select id= "select-provincias">
+<select id= "select-provincias" class="select">
 <option value= "">Selecciona una Provincia</option>
 
 </select>
