@@ -8,15 +8,31 @@
 //SELECT ORGANISMOS 
 
 (function($){
-  $('#select-organismos').on('change', (e)=>{
-
-  e.preventDefault();
+  $('#select-organismos').on('change', ()=>{
 
   let select = $('#select-organismos').val();
   let select_name = $('#select-organismos').find('option:selected').text();
-
+  let option = document.querySelector("option");
 
   let data = select.split(",");
+  data = data.map((el)=>{
+    return el.trim();
+  });  
+
+  
+  var names = [];
+  var slugs = [];  
+
+  function splitArray(candid) {
+
+    for(var i=0; i<candid.length; i++)
+        (i % 2 == 0 ? slugs : names).push(candid[i]);
+    return [slugs, names];
+}
+
+splitArray(data);
+
+
   let sel = document.getElementById('select-provincias');
   let newClassname = select_name.toLowerCase() + '--done';
           
@@ -73,11 +89,11 @@
           function append_options(){
             if(!(select_name == 'Nacionales')){
               if(!sel.classList.contains(newClassname)){
-                for (let i= 0; i< data.length-1; i++) {
+                for (let i= 0; i< slugs.length-1; i++) {
                 let opt = document.createElement('option');
                 opt.className = select_name.toLowerCase();
-                opt.value = data[i];
-                opt.text = data[i];
+                opt.value = slugs[i];
+                opt.text = names[i];
                 sel.classList.add(newClassname);
                 sel.appendChild(opt);           
                 }
@@ -94,41 +110,31 @@
 
 
 (function($){
-  $('#select-provincias').on('change', (e)=>{
+  $('#select-provincias').on('change', ()=>{
 
-  e.preventDefault();
-
-  let select = $('#select-provincias').val();
-  let select_name = $('#select-provincias').find('option:selected').text();
+  let select = $('#select-provincias').find('option:selected').val();
 
   let div_nac = document.getElementById('div-nacionales');
   $(div_nac).addClass('display--n');
 
 
   let divs = document.getElementsByClassName(select);
-  
 
+    if ((select)){
+      $(divs).addClass("display--b");
+      $(divs).removeClass("display--n");
 
-  
-  $(divs).toggleClass('display--n display--b');
+}
+      $('#select-provincias').on('change', (e) =>{
+        e.preventDefault();
 
-  for (let i= 0; i< divs.length; i++) {
-    console.log('hola');
-    let firstClass= divs[i].className.split('  ')[0];
-    console.log(firstClass);
-    if (select_name === firstClass) {
-      divs[i].style.display = 'block';
-      $(divs[i]).addClass('was--selected');
-      console.log('coincide');    
-      }$('#select-provincias').on('change', () =>{
-        divs[i].style.display = 'none';
+        $(divs).addClass("display--n");
+        
+        
+        
       })
-      $('#select-organismos').on('change', () =>{
-        let select_name = $('#select-organismos').find('option:selected').text();
-          if(select_name == 'Nacionales'){
-            divs[i].style.display = 'none';
-          }
-      })
-    }
+    
   })
+  
+  
 })(jQuery);

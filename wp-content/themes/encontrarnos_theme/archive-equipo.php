@@ -35,7 +35,7 @@ get_header();
 				<img src="<?php the_post_thumbnail_url('card-img'); ?>" class="card__img"></img>
 				<a href= <?php the_permalink(); ?>><h5 class= "card__title"> <?php the_title();?> </h5></a>
 			
-				<div class="text-wrapper">
+				<div class="card__text-wrapper">
 					<?php get_template_part( './src/custom-parts/template', 'acf_equipo' );?>
 						<p class= "card__text"><?php the_excerpt(); ?> </p>
 				</div>

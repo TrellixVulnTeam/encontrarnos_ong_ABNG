@@ -20,6 +20,7 @@
             width: 100%;
         }
         &__subtitle{
+            text-align: center;
             margin: 0;
             padding: 0;
         }
@@ -30,12 +31,13 @@
             border-radius: 50%;
         }
         &__text{
+            text-align: center;
             margin: 0;
             padding: 0;
         }
 }
 
-.text-wrapper {
+.card__text-wrapper {
     width: 90%;
 }
 

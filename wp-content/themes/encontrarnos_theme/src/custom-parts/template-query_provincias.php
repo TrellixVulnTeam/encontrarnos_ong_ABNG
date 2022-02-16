@@ -16,8 +16,10 @@
                 if($_posts->have_posts()): 
 						while ($_posts->have_posts()) : $_posts->the_post(); ?>
 
-                            <div class=' <?php echo strip_tags( get_the_term_list( $post->ID, 'tipos-de-organismo', '', ', '));?>  display--n'
-							id= '<?php echo $post->ID;?>'>
+                            <div class='<?php foreach(get_the_terms( $post->ID, 'tipos-de-organismo') as $termy){
+									echo $termy->slug;
+							};?> <?php foreach(get_the_terms($post->ID, 'tipos-de-organismo') as $term ){
+								echo get_term( $term->parent)->name;}?> display--n'>
 							<h6> <?php the_title();?> </h6>
 							<div> <?php the_content();?> </div>				
 							</div>

@@ -38,19 +38,13 @@ $espacio = ',';
 
 foreach($the_query->get_terms() as $term){ 
 ?>
-<option value="<?php
-
-if($term->name == 'Nacionales'){ ?>
-
-    <?php get_template_part('./src/custom-parts/template', 'query_nacionales'); ?>
-    <?php
-    }
-else {
+<option value= "<?php if($term->name == 'Nacionales'){?>
+    <?php get_template_part('./src/custom-parts/template', 'query_nacionales'); } 
+    else {
 $termchildren = get_term_children( $term->term_id, 'tipos-de-organismo' );
 foreach ( $termchildren as $child ) {
-$termz = get_term_by( 'id', $child, 'tipos-de-organismo' ); ?>
- <?php echo $termz->name.$espacio;} } ?>
-"><?php echo $term->name; ?></option>
+$termz = get_term_by( 'id', $child, 'tipos-de-organismo');?>
+ <?php echo $termz->slug.$espacio;?>  <?php echo $termz->name.$espacio;}}?>"><?php echo $term->name; ?></option>
 	
 <?php
 }

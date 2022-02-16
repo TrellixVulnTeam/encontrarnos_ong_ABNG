@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'encontrarnos_theme_widgets_init' );
  */
 function encontrarnos_theme_scripts() {
 	wp_enqueue_style( 'underscores_theme_base-style', get_template_directory_uri() . './style.css', array(), _S_VERSION );
-	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . './src/css/styles.css', array(), _S_VERSION );
+	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . '/src/css/styles.css', array(), _S_VERSION );
 	
 	wp_style_add_data( 'encontrarnos_theme-style', 'rtl', 'replace' );
 
@@ -276,9 +276,9 @@ add_action('init', 'organismos_taxonomy');
 if (function_exists('acf_add_options_page')){
 	acf_add_options_page(
 		array(
-			'page_title' => 'Headers Personalizados',
-			'menu_title' => 'Headers Personalizados',
-			'menu_slug' =>  'headers-personalizados',
+			'page_title' => 'Heros Personalizados',
+			'menu_title' => 'Heros Personalizados',
+			'menu_slug' =>  'heros-personalizados',
 			'capability' => 'edit_posts',
 			'icon_url' => 'dashicons-heading'
 
@@ -289,7 +289,7 @@ if (function_exists('acf_add_options_page')){
 			array(
 				'page_title' => 'Home Page',
 				'menu_title' => 'Home Page',
-				'parent_slug' =>  'headers-personalizados'
+				'parent_slug' =>  'heros-personalizados'
 	
 			)
 			
@@ -299,7 +299,7 @@ if (function_exists('acf_add_options_page')){
 			array(
 				'page_title' => 'Quiénes Somos',
 				'menu_title' => 'Quiénes Somos',
-				'parent_slug' =>  'headers-personalizados'
+				'parent_slug' =>  'heros-personalizados'
 	
 			)
 			
@@ -309,7 +309,7 @@ if (function_exists('acf_add_options_page')){
 			array(
 				'page_title' => 'Preguntas Frecuentes',
 				'menu_title' => 'Preguntas Frecuentes',
-				'parent_slug' =>  'headers-personalizados'
+				'parent_slug' =>  'heros-personalizados'
 	
 			)
 			
@@ -319,7 +319,7 @@ if (function_exists('acf_add_options_page')){
 			array(
 				'page_title' => 'Glosario',
 				'menu_title' => 'Glosario',
-				'parent_slug' =>  'headers-personalizados'
+				'parent_slug' =>  'heros-personalizados'
 	
 			)
 			
@@ -329,7 +329,7 @@ if (function_exists('acf_add_options_page')){
 			array(
 				'page_title' => 'Organismos',
 				'menu_title' => 'Organismos',
-				'parent_slug' =>  'headers-personalizados'
+				'parent_slug' =>  'heros-personalizados'
 	
 			)
 			
@@ -339,7 +339,7 @@ if (function_exists('acf_add_options_page')){
 			array(
 				'page_title' => 'Páginas Útiles',
 				'menu_title' => 'Páginas Útiles',
-				'parent_slug' =>  'headers-personalizados'
+				'parent_slug' =>  'heros-personalizados'
 	
 			)
 			
@@ -349,7 +349,7 @@ if (function_exists('acf_add_options_page')){
 			array(
 				'page_title' => 'Novedades',
 				'menu_title' => 'Novedades',
-				'parent_slug' =>  'headers-personalizados'
+				'parent_slug' =>  'heros-personalizados'
 	
 			)
 			
@@ -359,7 +359,7 @@ if (function_exists('acf_add_options_page')){
 			array(
 				'page_title' => 'Contacto',
 				'menu_title' => 'Contacto',
-				'parent_slug' =>  'headers-personalizados'
+				'parent_slug' =>  'heros-personalizados'
 	
 			)
 			

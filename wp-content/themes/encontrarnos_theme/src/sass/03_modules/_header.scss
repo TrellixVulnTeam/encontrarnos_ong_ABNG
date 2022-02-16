@@ -1,3 +1,26 @@
+.hero {
+    @include flex(row, center, center);
+    &__bg{
+        background-image: (url('../images/background/00_vector_bg.png'));
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 95vh;
+    }
+    &__text{
+        margin: auto;
+        width: 60%;
+        @include flex(column, flex-start,  flex-start);
+    }
+    &__img{
+        margin: auto;
+        border-radius: 50%;
+        width: 50%;
+    }
+}
+
+
+
 .header-bar {
     background-color: color(primary);
     height: 70px;
