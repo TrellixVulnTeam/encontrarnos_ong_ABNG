@@ -305,4 +305,33 @@ details[open] > summary .bi-chevron-compact-down {
   display: none;
 }
 
+select {
+  padding: 5px;
+  background-color: #FFFFFF;
+  font-family: "Mukta", sans-serif;
+  font-size: 1.6rem;
+}
+select::-ms-check {
+  background-color: #FCFBEC;
+}
+
+.text-wrapper {
+  margin-top: 3%;
+  width: 70%;
+  margin-left: 10%;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.organismos-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: wrap;
+}
+
 /*# sourceMappingURL=styles.css.map */

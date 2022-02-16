@@ -12,7 +12,9 @@
 ?>	</div>
 	<footer id="colophon" class="site-footer">
 		<div class="content-wrapper">
+			
 		<div class="site-info">
+		<p>SOY EL FOOTER</p>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

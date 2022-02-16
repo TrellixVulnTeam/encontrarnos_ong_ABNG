@@ -6,3 +6,30 @@
     display: none;
 }
 
+// .form-wrapper{
+//     margin-bottom: 2%;
+//     @include flex(column, flex-start, flex-start);
+// }
+
+select{
+    padding: 5px;
+    background-color: color(background);
+    font-family: $font-secondary;
+    font-size: font-size(text);
+    &::-ms-check{
+        background-color: color(odd);
+    }
+}
+
+.text-wrapper{
+    margin-top: 3%;
+    width: 70%;
+    margin-left: 10%;
+    padding-bottom: 50px;
+    @include flex(column, flex-start, flex-start);
+}
+
+.organismos-wrapper{
+    @include flex(row, flex-start, flex-start);
+    flex: wrap;
+}
