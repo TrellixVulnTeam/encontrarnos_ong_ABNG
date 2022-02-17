@@ -5,6 +5,17 @@ get_header();
 </div>
 </div>
 
+<?php 
+$img_data = get_field('imagen-o', 'options');
+$img_url = $img_data['sizes']['hero-img'];
+$img_width = $img_data['sizes']['hero-img-width'];
+$img_height = $img_data['sizes']['hero-img-height'];
+$img_alt = $img_data['alt'];
+?> 
+
+
+
+
 <main id="primary" class="site-main">
 
 	
@@ -15,7 +26,7 @@ get_header();
 <?php the_field('descripcion-o', 'options'); ?>
 </div>
 
-<img class= 'hero__img' src= '<?php the_field('imagen-o', 'options'); ?>'>
+<img class= 'hero__img' src= '<?php echo $img_url; ?> ' width= " <?php echo $img_width;?>" height= '<?php echo $img_height ; ?>' alt= '<?php echo $img_alt ?>'>
 
 
 </div>

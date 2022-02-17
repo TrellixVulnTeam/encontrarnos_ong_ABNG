@@ -1,5 +1,5 @@
 .hero {
-    @include flex(row, flex-start, center);
+    @include flex(row, center, center);
     flex-wrap: wrap;
     &__bg{
             background-image: url("data:image/svg+xml,%3Csvg width='1440' height='805' viewBox='0 0 1440 805' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1442.5 66.7074C1308.63 142.873 1071.84 201.395 755.684 84.8946C427.992 -35.8547 155.268 -6.11997 -0.5 43.1838V804.09C129.908 795.353 344.649 754.704 596.15 636.209C879.832 502.552 1234.85 643.169 1442.5 768.948V66.7074Z' fill='%23E1F2E7'/%3E%3C/svg%3E");        
@@ -17,7 +17,6 @@
         position: relative;
         top: 100px;
         border-radius: 50%;
-        width: 50%;
     }
 }
 
@@ -26,7 +25,6 @@
 .header-bar {
     background-color: color(primary);
     height: 70px;
-    top: 30px;
     position: sticky;
     @include flex(row, flex-end, center);
     z-index: 999;
@@ -40,7 +38,7 @@
     @include flex(row, center, flex-start);
 }
 
-img.custom-logo {
+img.custom-logo { // MODIFICAR ESTOOOOOOOOOO
     max-height: 218px;
     max-width: 510px;
 }

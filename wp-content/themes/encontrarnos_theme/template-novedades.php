@@ -8,6 +8,16 @@ get_header();
 </div>
 </div>
 
+
+
+<?php 
+$img_data = get_field('imagen-n', 'options');
+$img_url = $img_data['sizes']['hero-img'];
+$img_width = $img_data['sizes']['hero-img-width'];
+$img_height = $img_data['sizes']['hero-img-height'];
+$img_alt = $img_data['alt'];
+?> 
+
 	
 <div class="hero__bg">
 <div class="content-wrapper hero">
@@ -16,7 +26,7 @@ get_header();
 <?php the_field('descripcion-n', 'options'); ?>
 </div>
 
-<img class= 'hero__img' src= '<?php the_field('imagen-n', 'options'); ?>'>
+<img class= 'hero__img' src= '<?php echo $img_url; ?> ' width= " <?php echo $img_width;?>" height= '<?php echo $img_height ; ?>' alt= '<?php echo $img_alt ?>'>
 
 
 </div>
