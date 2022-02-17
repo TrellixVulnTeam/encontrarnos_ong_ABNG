@@ -10,6 +10,28 @@
 get_header();
 ?>
 
+
+</div>
+</div>
+
+<main id="primary" class="site-main">
+
+	
+<div class="hero__bg">
+<div class="content-wrapper hero">
+<div class="hero__text">
+<h1 class= "title title--left"><?php the_field('titulo-qs', 'options'); ?></h1>
+<?php the_field('descripcion-qs', 'options'); ?>
+</div>
+
+<img class= 'hero__img' src= '<?php the_field('imagen-qs', 'options'); ?>'>
+
+
+</div>
+</div>
+<div class="content-wrapper">
+
+
 <section>
 	
 <h3 class="title title--left"><span class="title__span title__span--green"></span>Nuestra Misión</h3>

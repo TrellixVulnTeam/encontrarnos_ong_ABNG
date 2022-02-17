@@ -34,6 +34,7 @@ body{
 
 h1{
     @extend %titles;
+    text-transform: uppercase;
 } 
 h3{
     @extend %subtitles;
