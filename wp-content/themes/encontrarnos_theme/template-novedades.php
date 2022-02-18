@@ -41,11 +41,8 @@ $img_alt = $img_data['alt'];
 			<?php
 				/* Start the Loop */
 			while ( have_posts() ) : the_post();?>
-				<div class="card">
-					<div class="text-wrapper">
 						<?php get_template_part( './src/custom-parts/template', 'acf_novedades' );?>
-					</div>
-				</div>
+
 				<?php endwhile;
 			else :
 				get_template_part( 'template-parts/content', 'none' );

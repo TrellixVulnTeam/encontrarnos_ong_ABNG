@@ -63,7 +63,7 @@ $img_alt = $img_data['alt'];
 			/* Start the Loop */
 		while ( have_posts() ) : the_post();?>
 			<div class="card">
-				<img src="<?php the_post_thumbnail_url('card-img'); ?>" class="card__img"></img>
+				<img src="<?php the_post_thumbnail_url('card-img-team'); ?>" class="card__img--br"></img>
 				<a href= <?php the_permalink(); ?>><h5 class= "card__title"> <?php the_title();?> </h5></a>
 			
 				<div class="card__text-wrapper">

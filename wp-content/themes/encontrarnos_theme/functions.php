@@ -371,7 +371,9 @@ function mytheme_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 
-add_image_size('card-img', 200, 200, false);
+add_image_size('card-img-team', 180, 180, true);
+
+add_image_size('card-img', 300, 200, true);
 
 add_image_size('hero-img', 800, 600, true);
 

@@ -3,11 +3,11 @@
     flex-wrap: wrap;
     align-items: stretch;
     margin: auto;
-    width: 80%;
+    //@at-root: 80%;
 }
 
 .card {
-    @include flex(column, center, center);
+    @include flex(column, flex-start, center);
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
     margin: 1%;
     padding: 1%;
@@ -18,6 +18,10 @@
             margin: 0;
             padding: 0;
             width: 100%;
+            &--left{
+                width: 110%;
+                text-align: left;
+            }
         }
         &__subtitle{
             text-align: center;
@@ -25,19 +29,26 @@
             padding: 0;
         }
         &__img{
-
+            margin: 0;
             padding: 15px;
-            width: 70%;
-            border-radius: 50%;
+            width: 110%;
+            &--br{
+                padding: 40px;
+                border-radius: 50%;
+            }
         }
         &__text{
             text-align: center;
             margin: 0;
             padding: 0;
+            &--left{
+                text-align: left;
+            }
         }
 }
 
 .card__text-wrapper {
     width: 90%;
+    margin-bottom: 10%;
 }
 
