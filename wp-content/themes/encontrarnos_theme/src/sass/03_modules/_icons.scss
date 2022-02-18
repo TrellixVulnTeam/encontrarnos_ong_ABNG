@@ -6,6 +6,14 @@
         transition: $link-transition;
         color: darken(color(background), 5%);
     }
+    &--form{
+        margin: 8px;
+        color: color(text);
+        &:hover{
+            transition: $link-transition;
+            color: lighten(color(text), 10%);
+        }
+    }
     &-chevron-compact-down{
         font-size: font-size(sub-title);
         font-weight: 900;

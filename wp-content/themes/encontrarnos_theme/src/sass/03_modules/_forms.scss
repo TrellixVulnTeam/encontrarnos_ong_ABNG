@@ -1,0 +1,42 @@
+.form-wrapper {
+    color: color(text);
+    @include flex(row, space-between, flex-start);
+    &--rs{
+        margin-right: 15%;
+        @include flex(column, flex-start, flex-start);
+        h6{
+            margin: 0;
+        }
+    }
+    
+}
+
+.form__content{
+    margin: auto;
+    width: 95%;
+}
+
+.wpforms
+{
+    &-title{
+        @extend %sub-sub-subtitles;
+        font-weight: 700;
+    }
+}
+
+.wpforms-field-label{
+    font-size: font-size(button-text) !important;
+    font-weight: 500 !important;
+}
+
+.form{
+    width: 40% !important;
+}
+
+.wpforms-field-large {
+    border: 2px solid #B6B6B6 !important;
+    border-radius: 4px !important;
+    &:hover{
+           border-color: #F2AC45 !important;
+    }
+}

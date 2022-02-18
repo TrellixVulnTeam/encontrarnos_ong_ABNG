@@ -15,9 +15,6 @@ $img_alt = $img_data['alt'];
 
 
 
-
-<main id="primary" class="site-main">
-
 	
 <div class="hero__bg">
 <div class="content-wrapper hero">

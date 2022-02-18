@@ -1,0 +1,17 @@
+%button {
+    background-color: color(button);
+    font-size: font-size(button-text);
+    font-weight: 600;
+    color: color(background);
+    border-radius: 220px;
+    padding: 2.5% 7%;
+}
+
+.button {
+    @extend %button;
+}
+
+#wpforms-submit-26 {
+@extend %button;
+
+}

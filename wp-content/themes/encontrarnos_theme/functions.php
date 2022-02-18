@@ -366,10 +366,14 @@ if (function_exists('acf_add_options_page')){
 			);
 }
 
+//EXCERPT LENGTH 
+
 function mytheme_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+
+//IMAGE SIZES
 
 add_image_size('card-img-team', 180, 180, true);
 
@@ -378,3 +382,44 @@ add_image_size('card-img', 300, 200, true);
 add_image_size('hero-img', 800, 600, true);
 
 
+//AJAX
+
+// add_action('wp_ajax_contact', 'contact_form');
+// add_action('wp_ajax_nopriv_contact', 'contact_form');
+
+// function contact_form(){
+
+// $formdata = [];
+// wp_parse_str($_POST['contact'], $formdata);
+
+// $admin_email = get_option('admin-email');
+
+// $headers[]= 'Content-type: text/html; charset=UTF-8';
+// $headers[] = 'From: ' . $admin_email;
+// $headers[] = 'Reply-to ' . $formdata['email'];
+
+// $send_to = $admin_email;
+
+// $subject = 'Contacto: Mensaje de ' . $formdata['name'];
+
+// $msg = '';
+
+// foreach($formdata as $index=> $field ){
+// 	$msg = '<strong>' . $index . '</strong>' . $field . '<br />';
+// }
+
+// try {
+// 	if(wp_mail($send_to, $subject, $msg, $headers)){
+// 		wp_send_json_success('Mail enviado exitosamente');
+// 	}
+// 	else {
+// 		wp_send_json_error('Error al enviar el mail');
+// 	}
+// } catch (Exception $e){
+// 	wp_send_json_error($e->getMessage());
+// }
+
+// wp_send_json_success($formdata['name']);
+
+
+// }
