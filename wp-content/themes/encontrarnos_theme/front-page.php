@@ -31,8 +31,6 @@ $img_alt = $img_data['alt'];
 <section>
 		<?php if(have_posts() ) : while ( have_posts() ) : the_post();?>
 
-            <?php the_content() ?> 
-
         <?php endwhile;
 
 		else :
@@ -46,6 +44,7 @@ $img_alt = $img_data['alt'];
 <section>
 	<h3 class="title title--left"><span class="title__span title__span--green"></span>¿Quiénes somos?</h3>
 </section>
+
 <section>
 
 	<h3 class="title"><span class="title__span"></span>Preguntas Frecuentes</h3>
@@ -54,6 +53,38 @@ $img_alt = $img_data['alt'];
 <section>
 <h3 class="title title--left"><span class="title__span title__span--grey"></span>Glosario</h3>
 </section>		
+
+<section>
+<div class="section-wrapper-censo">
+<h3 class="title title--left"><span class="title__span title__span"></span>Podés brindar datos para colaborar con el censo</h3>
+<div class="form-wrapper">
+		<div class="form__content--50w">
+			<?php the_field('texto_censo'); ?>
+		</div>
+		<?php echo do_shortcode('[wpforms id="213" title="false" description= "false"]');?>
+		</div>
+		</div>
+</section>
+
+
+<section>
+</div>
+	<div class="form-wrapper--bg">
+	<div class="content-wrapper">
+	<h3 class="title title--left title--white"><span class="title__span title__span"></span>Si buscás a un hijo o hija, vos también podés iniciar la búsqueda</h3>
+	<div class="form-wrapper form-wrapper--reverse form-wrapper--white">
+		<div class="form__content--50w">
+			<p><?php the_field('texto_madres'); ?></p>
+		</div>
+		<?php echo do_shortcode('[wpforms id="227" title="false" description= "false"]');?>
+</section>
+
+	</div>
+	</div>
+	</div>
+
+
+<div class= "content-wrapper">
 
 	</main><!-- #main -->
 	</div>

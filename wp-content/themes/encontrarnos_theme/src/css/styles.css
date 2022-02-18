@@ -39,7 +39,7 @@ p, li {
   color: #3A5743;
 }
 
-#wpforms-submit-26, .button {
+#wpforms-submit-227, #wpforms-submit-213, #wpforms-submit-26, .button {
   background-color: #F2AC45;
   font-size: 1.5rem;
   font-weight: 600;
@@ -159,6 +159,9 @@ a:hover {
 }
 .title--mb-0 {
   margin-bottom: 0;
+}
+.title--white {
+  color: #FFFFFF;
 }
 
 .title__span {
@@ -351,10 +354,23 @@ img.custom-logo {
 .form-wrapper--rs h6 {
   margin: 0;
 }
+.form-wrapper--reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.form-wrapper--bg {
+  color: #FFFFFF;
+  padding: 3% 0;
+  background-color: #E96E51;
+}
+.form-wrapper--white {
+  color: #FFFFFF;
+}
 
-.form__content {
-  margin: auto;
-  width: 95%;
+.section-wrapper-censo {
+  padding: 3% 0;
 }
 
 .wpforms-title {
@@ -368,6 +384,17 @@ img.custom-logo {
 
 .form {
   width: 40% !important;
+}
+.form__content {
+  margin: auto;
+  width: 95%;
+}
+.form__content--50w {
+  margin: 0 2%;
+  width: 50%;
+}
+.form__content--50w p {
+  color: #FFFFFF;
 }
 
 .wpforms-field-large {
