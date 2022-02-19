@@ -126,35 +126,42 @@ $img_alt = $img_data['alt'];
 				wp_reset_postdata(); ?>
 
 				<a href= "<?php echo home_url('/faqs') ?>"><button class= "button button--center">Ver más</button></a>
-</div>
+			</div>
+
 </section>
 </div>
 
 <!-- GLOSARIO -->
 
+<?php 
+$the_query = new WP_Query(array('pagename' => 'glosario') );
+$glosario_id = $the_query->get_queried_object_id();
+$glosario = get_field('glosario', $glosario_id);
+$glosario_img = get_field('imagen', $glosario_id);
+?>	
+
 <div class="content-wrapper">
 
 <section>
-	<div class= "section-wrapper--pr">
+	<div>
 <h3 class="title title--left"><span class="title__span title__span--grey"></span>Glosario</h3>
 
 
+		<div class="table">
+			<h6 class= "table__title-1">Término</h6>
+			<h6 class= "table__title-2">Abreviatura</h6>
+			<h6 class= "table__title-3">Descripción</h6>
+			<p class= "table__item-1 table__item-1--nobg"><?php echo $glosario[0]['termino']?></p>
+			<p class= "table__item-2 table__item-1--nobg"><?php echo $glosario[0]['abreviatura'];?></p>
+			<p class= "table__item-3 table__item-1--nobg"><?php echo $glosario[0]['descripcion'];?></p>
+		</div> 
 
-<?php 
-// the query
-$the_query = new WP_Query(array('pagename' => 'glosario') );
+		<a href= "<?php echo home_url('/glosario') ?>"><button class= "button button--grey">Ver más</button></a>
 
-echo $the_query->get_queried_object_id();
+		<div class="glosario-wrapper">
+		<img class= "glosario__img" src='<?php echo $glosario_img?> '>
+		</div>
 
-?>
-
-
-
-<?php $main = get_field('glosario', 84) ?> 
-        <p class= "table__item-1"><?php echo $main[0]['termino']?></p>
-        <p class= "table__item-2"><?php the_sub_field('abreviatura', 84);?></p>
-        <p class= "table__item-3"><?php the_sub_field('descripcion', 84);?></p>
-	
 	</div>
 </section>		
 
@@ -162,8 +169,8 @@ echo $the_query->get_queried_object_id();
 
 </div>
 
-<div class="section-wrapper--02">
-	<section>
+<section>
+	<div class="section-wrapper--02">
 		<div class="content-wrapper section-wrapper--flex">
 			<div class="section-wrapper--flex section-wrapper--flex--col">
 				<h3 class="title title--left"><span class="title__span title__span--green"></span>Organismos</h3>
@@ -176,8 +183,8 @@ echo $the_query->get_queried_object_id();
 				<a href= "<?php echo home_url('/paginas-utiles') ?>"><i class="bi bi-plus"></i></a>
 			</div>
 		</div>
-	</section>
-</div>
+	</div>
+</section>
 
 
 <div class="content-wrapper">

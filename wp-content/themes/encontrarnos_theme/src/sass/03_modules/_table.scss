@@ -22,14 +22,23 @@
     &__item-1{
         @extend %item;
         grid-area: "item-1";
+        &--nobg{
+            background-color: color(background);
+        }
     }
     &__item-2{
         @extend %item;
         grid-area: "item-2";
+        &--nobg{
+            background-color: color(background);
+        }
     }
     &__item-3{
         @extend %item;
         grid-area: "item-3";
+        &--nobg{
+            background-color: color(background);
+        }
     }
 }
 

@@ -6,7 +6,8 @@ $colors: (
     background: #FFFFFF,
     button: #F2AC45,
     alternate: #888888,
-    text: #3A5743
+    text: #3A5743,
+    grey: #8888
 );
 
 @function color($color-name){

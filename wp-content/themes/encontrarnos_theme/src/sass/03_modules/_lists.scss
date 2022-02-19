@@ -1,22 +1,18 @@
 .ul-mision__li{
     list-style: none;
     margin-bottom: 4%;
-    &::before {
-        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-        color: color(primary); /* Change the color */
-        font-weight: 800; /* If you want it to be bold */
+    p::before {
+        content: "\2022";  
+        color: color(primary); 
+        font-weight: 800; 
         font-size: font-size(sub-title);
-        display: inline-block; /* Needed to add space between the bullet and the text */
-        width: 0.7em; /* Also needed for space (tweak if needed) */
-        margin-left: -1em; /* Also needed for space (tweak if needed) */
-    }
-    .li__span--bold{
-        font-weight: bold;
+        display: inline-block; 
+        width: 0.7em; 
+        margin-left: -1em; 
     }
 }
 
 .ul-form-contact{
-    // padding-left: 0;
     padding: 2% 0;
     margin-left :0;
     list-style: none;

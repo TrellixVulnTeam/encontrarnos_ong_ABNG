@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'encontrarnos_theme_widgets_init' );
  */
 function encontrarnos_theme_scripts() {
 	wp_enqueue_style( 'underscores_theme_base-style', get_template_directory_uri() . './style.css', array(), _S_VERSION );
-	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . './src/css/styles.css', array(), _S_VERSION );
+	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . '/src/css/styles.css', array(), _S_VERSION );
 	
 	wp_style_add_data( 'encontrarnos_theme-style', 'rtl', 'replace' );
 
@@ -273,6 +273,23 @@ function organismos_taxonomy(){
 
 add_action('init', 'organismos_taxonomy');
 
+//MISIÓN OPTION PAGE
+
+if (function_exists('acf_add_options_page')){
+	acf_add_options_page(
+		array(
+			'page_title' => 'Misión',
+			'menu_title' => 'Misión',
+			'menu_slug' =>  'mision',
+			'capability' => 'edit_posts',
+			'icon_url' => 'dashicons-heart'
+
+		)
+		);
+	}
+
+//RSS OPTION PAGE
+
 if (function_exists('acf_add_options_page')){
 	acf_add_options_page(
 		array(
@@ -285,6 +302,9 @@ if (function_exists('acf_add_options_page')){
 		)
 		);
 	}
+
+
+//HEROS OPTION PAGE
 
 if (function_exists('acf_add_options_page')){
 	acf_add_options_page(
@@ -389,7 +409,5 @@ add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 //IMAGE SIZES
 
 add_image_size('card-img-team', 180, 180, true);
-
 add_image_size('card-img', 300, 200, true);
-
 add_image_size('hero-img', 800, 600, true);
