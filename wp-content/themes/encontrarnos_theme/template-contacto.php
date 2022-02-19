@@ -33,10 +33,8 @@ $img_alt = $img_data['alt'];
 </div>
 <div class="content-wrapper">
 
-	<main id="primary" class="site-main">
-
-	
-
+<main id="primary" class="site-main">
+	<section class= "section-contacto">
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 		<h3 class="title title--left"><span class="title__span title__span"></span><?php the_title(); ?></h3>
@@ -63,48 +61,10 @@ $img_alt = $img_data['alt'];
 		<?php endwhile; // End of the loop.
 		?>
 
-	</main><!-- #main -->
+	</section>
+</main><!-- #main -->
 
 <?php
 get_footer();
 
 ?>
-
-<!-- <script>
-
-//FORM AJAX
-
-(function($){
-
-$('#contact-form').on('submit',(e)=>{
-	e.preventDefault();
-
-	let endpoint = ' <?php echo admin_url('admin-ajax.php'); ?>';
-	let form = $('#contact-form').serialize();
-
-	let formdata = new FormData();
-
-	formdata.append('action', 'contact');
-	formdata.append('contact', form);
-
-	$.ajax(endpoint, {
-		type: 'POST',
-		data: formdata,
-		processData: false,
-		contentType: false,
-
-		success: (res) => {
-			alert(res.data)
-		},
-
-		error: ()=> {
-
-		}
-	})
-})
-
-
-})(jQuery);
-
-
-</script> -->

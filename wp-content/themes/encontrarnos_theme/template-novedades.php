@@ -31,11 +31,11 @@ $img_alt = $img_data['alt'];
 
 </div>
 </div>
-<div class="content-wrapper">
+<div class="content-wrapper section-novedades">
 
 
 	<main id="primary" class="site-main">
-			<section class="card-wrapper">
+			<section class="card-wrapper section-novedades">
 			<?php if ( have_posts() ) : ?>
 				<header class="page-header"></header><!-- .page-header -->
 			<?php

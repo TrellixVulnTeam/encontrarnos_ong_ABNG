@@ -24,9 +24,12 @@
         }
     }
 
-    .li--bold a {
+    .li--bold {
+        font-weight: bold;
+        a {
         font-weight: bold;
     }
+}
 
 .sub-menu {
     transition: 0.3s;

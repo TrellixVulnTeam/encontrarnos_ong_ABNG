@@ -53,3 +53,28 @@ p, li {
     color: color(text);
 }
 
+li {
+    list-style: none;
+}
+
+%mb{
+    margin-bottom: 10%;
+}
+
+.section{
+    &-equipo{
+        @extend %mb;
+    }
+    &-contacto{
+        @extend %mb;
+    }
+    &-faqs{
+        @extend %mb;
+    }
+    &-novedades{
+        @extend %mb;
+    }
+    &-pagsutiles{
+        @extend %mb;
+    }
+}

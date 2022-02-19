@@ -5,3 +5,44 @@ html {
     background-color: color(secondary);
 }
 }
+
+.footer-wrapper{
+    color: color(primary);
+    padding: 4%;
+    @include flex(row, center, flex-start);
+}
+
+.footer-logo{
+    margin: 0;
+    padding: 0;
+    @include flex(column, center, center);
+    p{
+        color: color(primary);
+        margin-top: -7%;
+    }
+}
+
+.footer-rss{
+    .bi {
+        color: color(primary);
+    }
+    margin:-5%;
+}
+
+.footer-lists{
+    @include flex(row, flex-start, stretch);
+    li {
+        color: color(primary);
+        a {
+            color: color(primary);
+            font-weight: 500; 
+        }
+        
+    }
+
+}
+
+.logo {
+    margin: 0;
+}
+

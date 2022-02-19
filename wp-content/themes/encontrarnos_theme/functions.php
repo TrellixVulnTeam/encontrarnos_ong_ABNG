@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'encontrarnos_theme_widgets_init' );
  */
 function encontrarnos_theme_scripts() {
 	wp_enqueue_style( 'underscores_theme_base-style', get_template_directory_uri() . './style.css', array(), _S_VERSION );
-	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . './src/css/styles.css', array(), _S_VERSION );
+	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . '/src/css/styles.css', array(), _S_VERSION );
 	
 	wp_style_add_data( 'encontrarnos_theme-style', 'rtl', 'replace' );
 
@@ -411,3 +411,6 @@ add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 add_image_size('card-img-team', 180, 180, true);
 add_image_size('card-img', 300, 200, true);
 add_image_size('hero-img', 800, 600, true);
+
+add_image_size('logo-lg', 510, 218, false);
+add_image_size('logo-sm', 358, 144, false);

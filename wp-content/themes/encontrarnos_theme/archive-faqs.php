@@ -43,6 +43,8 @@ $img_alt = $img_data['alt'];
 
 	<main id="primary" class="site-main">
 
+<!-- THE LOOP -->
+
 	<?php if ( have_posts() ) : ?>
 			<header class="page-header">
 			</header><!-- .page-header -->
@@ -54,6 +56,8 @@ $img_alt = $img_data['alt'];
 		endif;
 		?>
 
+<!-- SOBRE BUSQUEDAS -->
+<section>
 		<h5 class="title title--left title--mb-0">Sobre Búsquedas</h5>
 					<?php 
 					$args= array(
@@ -86,6 +90,12 @@ $img_alt = $img_data['alt'];
 				endwhile;
 			endif;
 			wp_reset_postdata(); ?>
+
+</section>
+
+<!-- SOBRE TESTS Y MATCHS  -->
+
+<section class="section-faqs">
 
 		<h5 class="title title--left title--mb-0">Sobre Tests y Matchs</h5>
 					<?php 
@@ -120,7 +130,7 @@ $img_alt = $img_data['alt'];
 					endif;
 					wp_reset_postdata(); ?>
 
-
+</section>
 	</main><!-- #main -->
 
 <?php

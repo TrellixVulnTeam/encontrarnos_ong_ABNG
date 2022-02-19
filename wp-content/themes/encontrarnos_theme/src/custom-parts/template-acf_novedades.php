@@ -12,7 +12,6 @@
 
     <?php $link = get_sub_field('link'); ?>
 
-
     <div class="card">
     <img class= 'card__img' src= '<?php echo $img_url; ?> ' width= " <?php echo $img_width;?>" height= '<?php echo $img_height ; ?>' alt= '<?php echo $img_alt ?>'>
         <div class="card__text-wrapper">

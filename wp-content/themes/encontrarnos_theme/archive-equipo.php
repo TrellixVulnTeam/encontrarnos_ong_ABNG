@@ -43,7 +43,7 @@ $img_alt = $img_data['alt'];
 
 <section>
 	
-<h3 class="title title--left"><span class="title__span title__span--green"></span>Nuestra Misión</h3>
+<h3 id= "mision" class="title title--left"><span class="title__span title__span--green"></span>Nuestra Misión</h3>
 <ul class="ul-mision">
 	<?php get_template_part( 'src/custom-parts/template', 'acf_mision' ); ?>
 </ul>
@@ -54,9 +54,9 @@ $img_alt = $img_data['alt'];
 </div>
 
 <div class="card-wrapper--bg">
-<section class="content-wrapper">
+<section class="content-wrapper section-equipo">
 
-<h3 class="title"><span class="title__span"></span>Integrantes</h3>
+<h3 id= "equipo" class="title"><span class="title__span"></span>Integrantes</h3>
 <div class="card-wrapper">
 		<?php if ( have_posts() ) : ?>
 			<header class="page-header">

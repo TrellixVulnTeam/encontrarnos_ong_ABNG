@@ -39,7 +39,7 @@ $img_alt = $img_data['alt'];
 		while ( have_posts() ) :
 			the_post();
 			?>
-			<div class="table">
+			<div class="table section-pagsutiles">
 			<h6 class= "table__title-1">Categoría</h6>
 			<h6 class= "table__title-2">Productos y servicios de Genealogía</h6>
 			<h6 class= "table__title-3">Descripción</h6>
