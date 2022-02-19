@@ -1,6 +1,7 @@
 .form-wrapper {
     color: color(text);
     @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
     &--rs{
         margin-right: 15%;
         @include flex(column, flex-start, flex-start);
@@ -42,16 +43,15 @@
 
 .form{
     width: 40% !important;
+    &__text--white{
+        color: color(background);    
+    }
     &__content{
         margin: auto;
         width: 95%;
         &--50w{
             margin: 0 2%;
-            width: 50%;
-            p{
-                color: color(background);    
-            }
-            
+            width: 50%;  
         }
 
     }

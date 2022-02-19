@@ -27,9 +27,9 @@
 ?>
 
 <div class="header-bar">
-<a  href="#facebook"><i class="bi bi-facebook"></i></a>
-<a href="#instragram"><i class="bi bi-instagram"></i></a>
-<a class= "link-padding" href="#twitter"><i class="bi bi-twitter"></i></a>
+<a  href="<?php the_field('facebook', 'options');?>"><i class="bi bi-facebook"></i></a>
+<a href="<?php the_field('instagram', 'options');?>"><i class="bi bi-instagram"></i></a>
+<a class= "link-padding" href="<?php the_field('twitter', 'options');?>"><i class="bi bi-twitter"></i></a>
 </div>
 
 <div class="content-wrapper">

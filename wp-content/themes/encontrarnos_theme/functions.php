@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'encontrarnos_theme_widgets_init' );
  */
 function encontrarnos_theme_scripts() {
 	wp_enqueue_style( 'underscores_theme_base-style', get_template_directory_uri() . './style.css', array(), _S_VERSION );
-	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . '/src/css/styles.css', array(), _S_VERSION );
+	wp_enqueue_style( 'encontrarnos_theme-style', get_template_directory_uri() . './src/css/styles.css', array(), _S_VERSION );
 	
 	wp_style_add_data( 'encontrarnos_theme-style', 'rtl', 'replace' );
 
@@ -276,6 +276,19 @@ add_action('init', 'organismos_taxonomy');
 if (function_exists('acf_add_options_page')){
 	acf_add_options_page(
 		array(
+			'page_title' => 'Links RSS',
+			'menu_title' => 'Links RSS',
+			'menu_slug' =>  'links-rss',
+			'capability' => 'edit_posts',
+			'icon_url' => 'dashicons-rss'
+
+		)
+		);
+	}
+
+if (function_exists('acf_add_options_page')){
+	acf_add_options_page(
+		array(
 			'page_title' => 'Heros Personalizados',
 			'menu_title' => 'Heros Personalizados',
 			'menu_slug' =>  'heros-personalizados',
@@ -380,46 +393,3 @@ add_image_size('card-img-team', 180, 180, true);
 add_image_size('card-img', 300, 200, true);
 
 add_image_size('hero-img', 800, 600, true);
-
-
-//AJAX
-
-// add_action('wp_ajax_contact', 'contact_form');
-// add_action('wp_ajax_nopriv_contact', 'contact_form');
-
-// function contact_form(){
-
-// $formdata = [];
-// wp_parse_str($_POST['contact'], $formdata);
-
-// $admin_email = get_option('admin-email');
-
-// $headers[]= 'Content-type: text/html; charset=UTF-8';
-// $headers[] = 'From: ' . $admin_email;
-// $headers[] = 'Reply-to ' . $formdata['email'];
-
-// $send_to = $admin_email;
-
-// $subject = 'Contacto: Mensaje de ' . $formdata['name'];
-
-// $msg = '';
-
-// foreach($formdata as $index=> $field ){
-// 	$msg = '<strong>' . $index . '</strong>' . $field . '<br />';
-// }
-
-// try {
-// 	if(wp_mail($send_to, $subject, $msg, $headers)){
-// 		wp_send_json_success('Mail enviado exitosamente');
-// 	}
-// 	else {
-// 		wp_send_json_error('Error al enviar el mail');
-// 	}
-// } catch (Exception $e){
-// 	wp_send_json_error($e->getMessage());
-// }
-
-// wp_send_json_success($formdata['name']);
-
-
-// }

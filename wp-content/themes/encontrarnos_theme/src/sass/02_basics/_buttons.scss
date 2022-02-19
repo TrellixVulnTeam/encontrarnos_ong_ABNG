@@ -4,24 +4,32 @@
     font-weight: 600;
     color: color(background);
     border-radius: 220px;
-    padding: 2.5% 7%;
+    padding: 1% 2.5%;
+    cursor: pointer;
 }
 
 .button {
     @extend %button;
+    &--center{
+        margin-left: 45%;
+    }
+    &--green{
+        background-color: color(primary);
+    }
 }
 
 #wpforms-submit-26 {
 @extend %button;
+padding: 2.5% 7%;
 
 }
 
 #wpforms-submit-213 {
     @extend %button;
-    
+    padding: 2.5% 7%;
 }
 
 #wpforms-submit-227 {
     @extend %button;
-    
+    padding: 2.5% 7%;
 }
