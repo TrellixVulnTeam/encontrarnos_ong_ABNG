@@ -136,6 +136,37 @@ splitArray(data);
     
   })
   
-  
 })(jQuery);
 
+//MODAL
+
+
+(function($){
+  $('.card').on('click', (e)=>{
+  
+    let id = e.currentTarget.id
+    console.log(id);
+
+  let cards = document.getElementsByClassName('display--n');
+  for (let index = 0; index < cards.length; index++) {
+    if (cards[index].classList.contains(id)){
+      cards[index].classList.remove('display--n');
+      cards[index].classList.add('display--b');
+    }
+    $('.modal').on('click', (e)=>{
+      console.log('hice click');
+      $('.modal').removeClass('display--b');
+      $('.modal').addClass('display--n');
+      
+    })
+    
+  }
+
+  //$(cards).addClass('display--b');
+
+  //$('.card-wrapper').addClass('modal');
+  
+  })
+  
+})(jQuery);
+  

@@ -1,1 +1,0 @@
-    <p class= "card__subtitle"><?php the_field('puesto_laboral'); ?></p>

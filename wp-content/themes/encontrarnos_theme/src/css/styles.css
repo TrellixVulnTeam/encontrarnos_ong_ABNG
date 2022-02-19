@@ -359,6 +359,11 @@ img.custom-logo {
   border-radius: 28px;
   text-align: center;
   width: 30%;
+  transition: 0.5s ease-in-out;
+}
+.card:hover {
+  transform: scale(99%);
+  cursor: pointer;
 }
 .card__title {
   margin: 0;
@@ -369,15 +374,24 @@ img.custom-logo {
   width: 110%;
   text-align: left;
 }
+.card__title--modal {
+  color: #FFFFFF;
+}
 .card__subtitle {
   text-align: center;
   margin: 0;
   padding: 0;
 }
+.card__subtitle--modal {
+  color: #FFFFFF;
+}
 .card__img {
   margin: 0;
   padding: 15px;
   width: 110%;
+}
+.card__img--nw {
+  width: 30%;
 }
 .card__img--br {
   padding: 40px;
@@ -391,10 +405,33 @@ img.custom-logo {
 .card__text--left {
   text-align: left;
 }
+.card__text--modal {
+  color: #FFFFFF;
+}
 
 .card__text-wrapper {
   width: 90%;
   margin-bottom: 10%;
+}
+.card__text-wrapper--modal {
+  text-align: center;
+  margin: 0;
+  width: 60%;
+}
+
+.modal {
+  cursor: pointer;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.959);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-wrapper {

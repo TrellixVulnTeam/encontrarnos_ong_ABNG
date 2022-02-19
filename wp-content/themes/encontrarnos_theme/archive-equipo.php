@@ -64,24 +64,40 @@ $img_alt = $img_data['alt'];
 		<?php
 			/* Start the Loop */
 		while ( have_posts() ) : the_post();?>
-			<div class="card">
+
+<!-- CARD -->
+
+			<div id="<?php echo get_the_ID(); ?>" class="card">
 				<img src="<?php the_post_thumbnail_url('card-img-team'); ?>" class="card__img--br"></img>
-				<a href= <?php the_permalink(); ?>><h5 class= "card__title"> <?php the_title();?> </h5></a>
+				<h5 class= "card__title"> <?php the_title();?> </h5>
 			
 				<div class="card__text-wrapper">
-					<?php get_template_part( './src/custom-parts/template', 'acf_equipo' );?>
+				<p class= "card__subtitle"><?php echo get_field('puesto_laboral'); ?></p>
 						<p class= "card__text"><?php the_excerpt(); ?> </p>
 				</div>
 			</div>
+
+<!-- MODAL -->
+
+			<div class="<?php echo get_the_ID(); ?> modal display--n">
+				<?php $post_id = get_the_ID(); ?>
+				
+				<img src="<?php the_post_thumbnail_url('card-img-team'); ?>" class="card__img--br card__img--nw"></img>
+				
+				<div class="card__text-wrapper card__text-wrapper--modal">
+				<h5 class= "card__title card__title--modal"> <?php the_title();?> </h5>
+				<p class= "card__subtitle card__subtitle--modal"><?php echo get_field('puesto_laboral'); ?></p>
+				<p class= "card__text card__text--modal"><?php echo get_the_content(); ?> </p>
+				</div>
+			</div>
+
 			<?php endwhile;
 		else :
 			get_template_part( 'template-parts/content', 'none' );
 		endif; ?>
-</div>
+
 </section>
-</div>
-
-</div>
-
+</div>	
+</div>	
 <?php
 get_footer();

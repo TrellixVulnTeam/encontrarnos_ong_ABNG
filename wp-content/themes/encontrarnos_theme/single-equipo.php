@@ -14,17 +14,24 @@ get_header();
 	<div class= "prueba">
 		<?php
 		while ( have_posts() ) :
-			the_post();
-			get_template_part( 'template-parts/content', get_post_type() );
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'encontrarnos_theme' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'encontrarnos_theme' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+			the_post(); ?>
+			
+			<div class="card-wrapper--modal">
+			<div class="card card--maxw">
+			<img src="<?php the_post_thumbnail_url('card-img-team'); ?>" class="card__img--br"></img>
+			<h5 class= "card__title"> <?php the_title();?> </h5>
+
+			<div class="card__text-wrapper">
+			<?php get_template_part( './src/custom-parts/template', 'acf_equipo' );?>
+			<p class= "card__text"><?php the_content(); ?> </p>
+			</div>
+			</div>
+			</div>
+
+			</div>
 
 
-		endwhile; // End of the loop.
+		<?php endwhile; // End of the loop.
 		?>
 
 	</main><!-- #main -->
