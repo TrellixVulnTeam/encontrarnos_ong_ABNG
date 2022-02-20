@@ -97,13 +97,13 @@ a:hover {
 }
 
 .section-wrapper--01 {
-  background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' width='1920' height='1079' viewBox='0 0 1920 1079.61'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E01_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M913.69,201C1236.94-.08,1816.75-1.91,1920,.9V907c-465.33-73.51-586,279.38-1920,140.08v-664C305.78,393.59,590.45,402.12,913.69,201Z' transform='translate(0 -0.39)'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 739.59'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E04_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M913.69,477.43c323.25-137.75,903.06-139,1006.31-137.08V961.1c-465.33-50.36-586,191.39-1920,96V602.17C305.78,609.37,590.45,615.22,913.69,477.43Z' transform='translate(0 -340)'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-position: bottom bottom;
+  background-size: cover;
 }
 .section-wrapper--02 {
-  background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 792.3'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E02_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M951,107.56C521.76-17.11,328.58-39.31,0,72.17L1,650.89C325.5,840.5,985.5,637,1440,792.3v-643C1302.84,167,1152.86,166.19,951,107.56Z' transform='translate(0 0)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 573.39'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E04_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M951,296.75C521.76,206.53,328.58,190.47,0,271.14L1,690C325.5,827.18,985.5,679.91,1440,792.3V327C1302.84,339.77,1152.86,339.19,951,296.75Z' transform='translate(0 -218.91)'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
 }
