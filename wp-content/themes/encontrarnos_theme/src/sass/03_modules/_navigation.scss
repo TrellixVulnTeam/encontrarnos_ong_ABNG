@@ -1,7 +1,13 @@
+nav {
+    background-color: rgba(255, 255, 255, 0.87);
+    top: 0;
+    position: sticky;
+    z-index: 999;
+}
+
 .main-navigation ul {
     margin-top: 2%;
     justify-content: flex-end;
-    position: sticky;
     @include mobile{
         justify-content: center;
     }

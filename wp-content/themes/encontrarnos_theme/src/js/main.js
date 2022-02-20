@@ -170,3 +170,22 @@ splitArray(data);
   
 })(jQuery);
   
+
+//SCROLL
+
+(function($){
+  
+$( window ).on('scroll',() => {
+  
+  var lastScrollTop = 0;
+  var st = $(window).scrollTop();
+  if (st > lastScrollTop){
+  $('.logo--menu').animate({ width: '30%'}, 1000); }
+  else {
+  $('.logo--menu').animate({ width: '+30%'}, 1000); //ARREGLAR ESTO
+  }
+  lastScrollTop = st;
+
+});
+  
+})(jQuery);

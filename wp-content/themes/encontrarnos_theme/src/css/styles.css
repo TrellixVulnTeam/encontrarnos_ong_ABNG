@@ -493,10 +493,16 @@ html footer {
   }
 }
 
+nav {
+  background-color: rgba(255, 255, 255, 0.87);
+  top: 0;
+  position: sticky;
+  z-index: 999;
+}
+
 .main-navigation ul {
   margin-top: 2%;
   justify-content: flex-end;
-  position: sticky;
 }
 @media (max-width: 759px) {
   .main-navigation ul {
@@ -642,12 +648,10 @@ html footer {
 .header-bar {
   background-color: #7CBC95;
   height: 70px;
-  position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
 }
 
 .header-rss {
@@ -658,9 +662,6 @@ html footer {
 }
 
 .site-header {
-  overflow: visible;
-  background-color: rgba(255, 255, 255, 0.87);
-  position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: center;

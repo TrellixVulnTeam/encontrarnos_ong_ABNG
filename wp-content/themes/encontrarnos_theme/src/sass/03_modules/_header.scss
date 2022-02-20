@@ -1,3 +1,5 @@
+//HERO
+
 .hero {
     @include flex(row, space-between, center);
         @include tablet{
@@ -59,14 +61,12 @@
     }
 }
 
-
+//HEADER
 
 .header-bar {
     background-color: color(primary);
     height: 70px;
-    position: sticky;
     @include flex(row, space-between, center);
-    z-index: 999;
 }
 
 .header-rss{
@@ -74,14 +74,12 @@
 }
 
 .site-header {
-    overflow: visible;
-    background-color: rgba(255, 255, 255, 0.87);
-    position: sticky;
     @include flex(row, center, flex-start);
 }
 
 
 .logo--menu{
+    //transition: 3s ease-in-out;
     @include tablet{
         display: none;
     }
