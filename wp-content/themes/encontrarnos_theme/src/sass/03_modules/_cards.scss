@@ -1,18 +1,31 @@
 .card-wrapper {
-    @include flex(row, space-around, flex-start);
+    @include flex(row, center, flex-start);
     flex-wrap: wrap;
     align-items: stretch;
     margin: auto;
+
+    @include desktop{
+    }
+    @include tablet{
+    }
+    @include mobile{
+        @include flex(column, space-between, space-between);
+    }
+
     &--bg{
         background: 
         url(image(vector03))  no-repeat top, 
         url(image(vector04))  no-repeat bottom;
         background-repeat: repeat-y space;
+        @include desktop{
+        }
+        @include tablet{
+        }
+        @include mobile{
+            background-image: none;
+        }
     }
     }
-
-
-// background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 2037.91'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E03_vector_bg-edit%3C/title%3E%3Cpath class='cls-1' d='M951,958.61C521.76,868.15,328.58,852.05,0,932.93l1,419.9c324.5,137.58,984.5-10.07,1439,102.6V988.88C1302.84,1001.76,1152.86,1001.15,951,958.61Z' transform='translate(0 582.48)'/%3E%3Cpath class='cls-1' d='M685.27-459.87c242.43-122.9,677.29-124,754.73-122.3V-28.43C1091-73.36,1000.5,142.28,0,57.17v-405.8C229.33-342.2,442.84-337,685.27-459.87Z' transform='translate(0 582.48)'/%3E%3C/svg%3E");
 
 .card {
     @include flex(column, flex-start, center);
@@ -24,6 +37,16 @@
     text-align: center;
     width: 30%;    
     transition: 0.5s ease-in-out;
+
+    @include tablet{
+        width: 40%;    
+    }
+
+    @include mobile{
+        margin: 2% 15%;
+        width: 70%;    
+    }
+
     &:hover{
         transform: scale(99%);
         cursor: pointer;
@@ -35,6 +58,15 @@
             &--left{
                 width: 110%;
                 text-align: left;
+                @include desktop{
+                    width:100%;
+                }
+                @include tablet{
+                    width: 90%;
+                }
+                @include mobile{
+                    width:100%;
+                }
             }
             &--modal{
                 color:color(background);
@@ -52,8 +84,14 @@
             margin: 0;
             padding: 15px;
             width: 110%;
+            @include mobile{
+                width: 90%;        
+            }
             &--nw{
                 width: 30%;
+                @include mobile{
+                    display: none;       
+                }
             }
             &--br{
                 padding: 40px;
@@ -64,11 +102,15 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            @include mobile{
+                margin: auto;        
+            }
             &--left{
                 text-align: left;
             }
             &--modal{
                 color: color(background);
+
             }
         }
 }
@@ -83,6 +125,10 @@
         text-align: center;
         margin: 0;
         width: 60%;
+        @include mobile{
+            margin: auto;   
+            width: 80%;  
+        }
     }
 }
 
@@ -96,5 +142,8 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.959);
     @include flex(row, center, center);
+    @include mobile{
+        @include flex(column, center, center); 
+    }
 }
 

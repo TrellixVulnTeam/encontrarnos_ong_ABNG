@@ -11,9 +11,37 @@ $font-sizes: (
         link: 1.25rem
 );
 
+$font-sizes--mq: (
+        title: 2.3rem,
+        sub-title: 1.8rem,
+        sub-sub-title: 1.6rem,
+        sub-sub-sub-title: 1.4rem,
+        text: 1.3rem,
+        button-text: 1.2rem,
+        link: 1.1rem
+);
+
+$font-sizes--mq--mobile: (
+        title: 1.6rem,
+        sub-title: 1.3rem,
+        sub-sub-title: 1.2rem,
+        sub-sub-sub-title: 1rem,
+        text: 0.9rem,
+        button-text: 0.7rem,
+        link: 0.7rem
+);
+
+
 @function font-size($fs){
     @return map-get($font-sizes, $fs);
 }
+@function font-size-mq($fs){
+    @return map-get($font-sizes--mq, $fs);
+}
+
+@function font-size-mq--mobile($fs){
+        @return map-get($font-sizes--mq--mobile, $fs);
+    }
 
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');

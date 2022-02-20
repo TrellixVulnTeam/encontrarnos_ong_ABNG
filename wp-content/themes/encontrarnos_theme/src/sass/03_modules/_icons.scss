@@ -2,6 +2,16 @@
     color: color(background);
     margin: 15px;
     font-size: font-size(text);
+    @include desktop{
+        font-size: font-size-mq(text);
+    }
+    @include tablet{
+        font-size: font-size-mq(text);
+    }
+    @include mobile{
+        margin: 10px;
+        font-size: font-size-mq--mobile(text);
+    }
     &:hover{
         transition: $link-transition;
         color: darken(color(background), 5%);
@@ -20,11 +30,29 @@
         font-weight: 900;
         padding: 0 10%;
         border-radius: 50%;
+        @include desktop{
+            font-size: font-size-mq(sub-title);
+        }
+        @include tablet{
+            font-size: font-size-mq(sub-title);
+        }
+        @include mobile{
+            font-size: font-size-mq--mobile(sub-title);
+        }
     }
     &-chevron-compact-down{
         font-size: font-size(sub-title);
         font-weight: 900;
         color: color(text);
+        @include desktop{
+            font-size: font-size-mq(sub-title);
+        }
+        @include tablet{
+            font-size: font-size-mq(sub-title);
+        }
+        @include mobile{
+            font-size: font-size-mq--mobile(sub-title);
+        }
         &:hover{
             transition: $link-transition;
             color: lighten(color(text), 10%);
@@ -47,6 +75,6 @@ details[open] > summary .bi-chevron-compact-down {
     }
     &__img{
         margin-right: 5%;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
     }
 }

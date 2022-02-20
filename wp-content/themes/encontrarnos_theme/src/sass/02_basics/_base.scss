@@ -1,4 +1,5 @@
 body{
+    min-width: 340px;
     background-color: color(background);    
 }
 
@@ -32,25 +33,96 @@ body{
     font-size: font-size(sub-sub-sub-title);
 }
 
+//TYPOGRAPHY MQ
+
+%titles-mq {
+    font-family: $font-primary;
+    font-size: font-size-mq(title);
+    color: color(text);
+}
+
+%subtitles-mq {
+    @extend %titles-mq;
+    font-size: font-size-mq(sub-title);
+}
+
+%sub-subtitles-mq {
+    @extend %subtitles-mq;
+    font-family: $font-secondary;
+    font-size: font-size-mq(sub-sub-title);
+
+}
+
+%sub-sub-subtitles-mq {
+    @extend %sub-subtitles-mq;
+    font-size: font-size-mq(sub-sub-sub-title);
+}
+
 h1{
     @extend %titles;
     text-transform: uppercase;
+    @include desktop{
+        font-size: font-size-mq(title);
+    }
+    @include tablet{
+        font-size: font-size-mq(title);
+    }
+    @include mobile{
+        font-size: font-size-mq--mobile(title);
+    }
 } 
 h3{
     @extend %subtitles;
+    @include desktop{
+        font-size: font-size-mq(sub-title);
+    }
+    @include tablet{
+        font-size: font-size-mq(sub-title);
+    }
+    @include mobile{
+        font-size: font-size-mq--mobile(sub-title);
+    }
 }
 
 h5 {
     @extend %sub-subtitles;
+    @include desktop{
+        font-size: font-size-mq(sub-sub-title);
+    }
+    @include tablet{
+        font-size: font-size-mq(sub-sub-title);
+    }
+    @include mobile{
+        font-size: font-size-mq--mobile(sub-sub-title);
+    }
 }
 
 h6{
     @extend %sub-sub-subtitles;
+    @include desktop{
+        font-size: font-size-mq(sub-sub-sub-title);
+    }
+    @include tablet{
+        font-size: font-size-mq(sub-sub-sub-title);
+    }
+    @include mobile{
+        font-size: font-size-mq--mobile(sub-sub-sub-title);
+    }
 }
 
 p, li {     
     font-size: font-size(text);
     color: color(text);
+    @include desktop{
+        font-size: font-size-mq(text);
+    }
+    @include tablet{
+        font-size: font-size-mq(text);
+    }
+    @include mobile{
+        font-size: font-size-mq--mobile(text);
+    }
+    
 }
 
 li {

@@ -8,41 +8,67 @@ html {
 
 .footer-wrapper{
     color: color(primary);
+    margin: auto;
     padding: 4%;
     @include flex(row, center, flex-start);
+    @include tablet{
+        flex-wrap: wrap;
+    } 
+    @include mobile{
+        @include flex(column, center, center);
+    } 
 }
 
 .footer-logo{
     margin: 0;
     padding: 0;
-    @include flex(column, center, center);
+    @include flex(column, flex-start, center);
+    @include tablet{
+    margin-bottom: 5%; }
+    @include mobile{
+        margin-bottom: 5%; }
     p{
         color: color(primary);
         margin-top: -7%;
+        @include tablet{
+            margin-top: 0; }
     }
 }
 
 .footer-rss{
     .bi {
         color: color(primary);
+        &:hover{
+            transition: $link-transition;
+            color: lighten(color(primary), 10%);
+        }
     }
     margin:-5%;
 }
 
 .footer-lists{
-    @include flex(row, flex-start, stretch);
+    @include flex(row, flex-start, stretch);   
+    ul {
+        @include mobile{
+            margin: 0; } }
     li {
         color: color(primary);
+        @include mobile{
+            text-align: center; }    
         a {
             color: color(primary);
-            font-weight: 500; 
+            font-weight: 500;
+            &:hover{
+                color: lighten(color(primary), 20%); } 
         }
-        
     }
-
 }
 
 .logo {
     margin: 0;
+    @include tablet{
+        display: none; }
+    @include mobile{
+        display: none; }
 }
 

@@ -1,14 +1,27 @@
 .ul-mision__li{
     list-style: none;
     margin-bottom: 4%;
-    p::before {
-        content: "\2022";  
-        color: color(primary); 
-        font-weight: 800; 
-        font-size: font-size(sub-title);
-        display: inline-block; 
-        width: 0.7em; 
-        margin-left: -1em; 
+    p{
+        &::before {
+            content: "\2022";  
+            color: color(primary); 
+            font-weight: 800; 
+            font-size: font-size(sub-title);
+            display: inline-block; 
+            width: 0.7em; 
+            margin-left: -1em; 
+            @include mobile{
+                font-size: font-size-mq--mobile(sub-title);
+                width: 0.5em; 
+                margin-left: -4em; 
+                display: none;
+    
+            }
+        }
+        @include mobile{
+            margin-left: -6em; 
+
+        }
     }
 }
 

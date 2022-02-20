@@ -42,16 +42,16 @@ $image_height = $image[2];
 				<div class="footer-lists">
 				<ul>
 					<li class="li--bold">ONG</li>
-					<li><a href="<?php echo home_url('/equipo/#equipo') ?>" >¿Quiénes somos?</li></a>
-					<li><a href="<?php echo home_url('equipo/#mision') ?>" >Misión</li></a>
-					<li><a href="<?php echo home_url('/novedades') ?>" >Novedades</li></a>
+					<li><a href="<?php echo home_url('/equipo/#equipo') ?>" >¿Quiénes somos?</a></li>
+					<li><a href="<?php echo home_url('equipo/#mision') ?>" >Misión</a></li>
+					<li><a href="<?php echo home_url('/novedades') ?>" >Novedades</a></li>
 				</ul>
 				<ul>
 					<li class="li--bold">INFORMACIÓN</li>
-					<li><a href="<?php echo home_url('/faqs') ?>" >Preguntas Frecuentes</li></a>
-					<li><a href="<?php echo home_url('/glosario') ?>" >Glosario</li></a>
-					<li><a href="<?php echo home_url('/organismos') ?>" >Organismos</li></a>
-					<li><a href="<?php echo home_url('/paginas-utiles') ?>" >Páginas Útiles</li></a>
+					<li><a href="<?php echo home_url('/faqs') ?>" >Preguntas Frecuentes</a></li>
+					<li><a href="<?php echo home_url('/glosario') ?>" >Glosario</a></li>
+					<li><a href="<?php echo home_url('/organismos') ?>" >Organismos</a></li>
+					<li><a href="<?php echo home_url('/paginas-utiles') ?>" >Páginas Útiles</a></li>
 				</ul>
 				<ul>
 					<li class="li--bold">CONTACTANOS</li>
@@ -59,12 +59,12 @@ $image_height = $image[2];
 					$the_query = new WP_Query(array('pagename' => 'contacto') );
 					$contacto_id = $the_query->get_queried_object_id();
 					echo get_field('telefonos', $contacto_id);?>">
-					Teléfono</li></a>
+					Teléfono</a></li>
 					<li><a href="mailto:<?php 
 					echo get_field('email', $contacto_id);?>"
-					>Mail</li></a>
-					<li><a href="<?php echo home_url('/#anchor-censo') ?>" >Censo</li></a>
-					<li><a href="<?php echo home_url('/#anchor-madres') ?>" >Madres</li></a>
+					>Mail</a></li>
+					<li><a href="<?php echo home_url('/#anchor-censo') ?>" >Censo</a></li>
+					<li><a href="<?php echo home_url('/#anchor-madres') ?>" >Madres</a></li>
 				</ul>
 				</div>
 			</div>

@@ -32,6 +32,7 @@
 }
 
 .sub-menu {
+    background: color(background);
     transition: 0.3s;
     @include flex(column, center, center);
     padding: 0.5rem;

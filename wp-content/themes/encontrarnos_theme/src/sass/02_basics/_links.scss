@@ -2,12 +2,21 @@ a {
     text-decoration: none;
     font-size: font-size(link);
     color: color(text);
+    transition: $link-transition;
     &:visited {
         color: color(text);
     }
     &:hover{
-        transition: $link-transition;
         color: lighten(color(text), 20%);
+    }
+    @include desktop{
+        font-size: font-size-mq(link);
+    }
+    @include tablet{
+        font-size: font-size-mq(link);
+    }
+    @include mobile{
+        font-size: font-size-mq--mobile(link);
     }
 }
 

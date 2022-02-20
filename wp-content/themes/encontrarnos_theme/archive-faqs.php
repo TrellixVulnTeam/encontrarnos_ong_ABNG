@@ -118,7 +118,7 @@ $img_alt = $img_data['alt'];
 					if($_posts->have_posts()): 
 						while ($_posts->have_posts()) : $_posts->the_post(); ?>
 						<details>
-							<summary class= "question-wrapper"> <?php the_title();?> 
+							<summary class= "question-wrapper"><?php the_title('<p>', '</p>');?>
 								<i class="bi bi-chevron-compact-down"></i>
 							</summary>
 							<hr>
