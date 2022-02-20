@@ -9,7 +9,18 @@
  * @package encontrarnos_theme
  */
 
+
+// TAMAÑO DEL LOGO
+
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'logo-lg'); 
+
+ $image_width = $image[1];
+ $image_height = $image[2];
+
 ?>
+
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -38,11 +49,7 @@
 
 		<header id="masthead" class="site-header">
 
-			<figure><?php
-				if ( function_exists( 'the_custom_logo' ) ) {
-					the_custom_logo(); 
-				}
-			?></figure>
+			<figure><img src= "<?php echo $image[0] ?>" width= "<?php echo $image_width ?>" height= "<?php echo $image_height ?> "></figure>
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'encontrarnos_theme' ); ?></button>

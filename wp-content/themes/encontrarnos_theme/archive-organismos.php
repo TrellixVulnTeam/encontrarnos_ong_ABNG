@@ -40,7 +40,7 @@ $img_alt = $img_data['alt'];
     <!-- SELECT ORGANISMOS -->
 
 
-<div class= 'form-wrapper'>
+<div class= 'select-wrapper'>
 <h6 class= 'title title--left title--mb-0'>Organismos</h6>
 <form>
 <select id= "select-organismos" class="select select--b">

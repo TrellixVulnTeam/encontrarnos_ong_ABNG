@@ -6,10 +6,10 @@
     display: none;
 }
 
-// .form-wrapper{
-//     margin-bottom: 2%;
-//     @include flex(column, flex-start, flex-start);
-// }
+.select-wrapper{
+    margin-bottom: 2%;
+    @include flex(column, flex-start, flex-start);
+}
 
 .select{
 

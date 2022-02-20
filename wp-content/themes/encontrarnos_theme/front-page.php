@@ -137,7 +137,12 @@ $img_alt = $img_data['alt'];
 $the_query = new WP_Query(array('pagename' => 'glosario') );
 $glosario_id = $the_query->get_queried_object_id();
 $glosario = get_field('glosario', $glosario_id);
-$glosario_img = get_field('imagen', $glosario_id);
+
+$img_data_glosario = get_field('imagen', $glosario_id);
+$img_url_glosario = $img_data_glosario['sizes']['img-glosario'];
+$img_width_glosario = $img_data_glosario['sizes']['img-glosario-width'];
+$img_height_glosario = $img_data_glosario['sizes']['img-glosario-height'];
+$img_alt_glosario = $img_data_glosario['alt'];
 ?>	
 
 <div class="content-wrapper">
@@ -159,7 +164,7 @@ $glosario_img = get_field('imagen', $glosario_id);
 		<a href= "<?php echo home_url('/glosario') ?>"><button class= "button button--grey">Ver más</button></a>
 
 		<div class="glosario-wrapper">
-		<img class= "glosario__img" src='<?php echo $glosario_img?> '>
+		<img class= "glosario__img" src='<?php echo $img_url_glosario; ?> ' width= " <?php echo $img_width_glosario;?>" height= '<?php echo $img_height_glosarioght ; ?>' alt= '<?php echo $img_alt_glosario ?>'
 		</div>
 
 	</div>

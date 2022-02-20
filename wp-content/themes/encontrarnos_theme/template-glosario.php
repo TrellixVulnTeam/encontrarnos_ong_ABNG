@@ -19,6 +19,7 @@ $img_width = $img_data['sizes']['hero-img-width'];
 $img_height = $img_data['sizes']['hero-img-height'];
 $img_alt = $img_data['alt'];
 
+
 ?> 
 
 	
@@ -52,7 +53,21 @@ $img_alt = $img_data['alt'];
 		?>
 
 		<div class="glosario-wrapper">
-		<img class= "glosario__img" src='<?php the_field('imagen'); ?> '>
+		<img class= "glosario__img" src='<?php
+
+		$img_data_glosario = get_field('imagen');
+		$img_url_glosario = $img_data_glosario['sizes']['img-glosario'];
+		$img_width_glosario = $img_data_glosario['sizes']['img-glosario-width'];
+		$img_height_glosario = $img_data_glosario['sizes']['img-glosario-height'];
+		$img_alt_glosario = $img_data_glosario['alt'];
+		
+		
+		echo $img_url_glosario; ?> ' width= " <?php echo $img_width_glosario;?>" height= '<?php echo $img_height_glosarioght ; ?>' alt= '<?php echo $img_alt_glosario ?>'
+
+		
+		
+		
+		'>
 		</div>
 
 	</main><!-- #main -->

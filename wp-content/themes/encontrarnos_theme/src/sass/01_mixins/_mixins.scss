@@ -1,9 +1,13 @@
+//FLEX
+
 @mixin flex($fd, $jc, $ai) {
     display: flex;
     flex-direction: $fd;
     justify-content: $jc;
     align-items: $ai;
 }
+
+//GRID
 
 @mixin grid($columns, $rows, $rgap, $cgap) {
     display: grid;
@@ -12,3 +16,6 @@
     grid-row-gap: $rgap;
     grid-column-gap: $cgap;
 }
+
+//VIEW PORTS
+
