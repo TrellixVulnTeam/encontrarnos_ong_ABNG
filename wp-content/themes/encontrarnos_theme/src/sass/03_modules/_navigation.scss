@@ -2,16 +2,23 @@
     margin-top: 2%;
     justify-content: flex-end;
     position: sticky;
+    @include mobile{
+        justify-content: center;
+    }
 }
 
 .menu  li {
     margin-right: 2px;
     font-family: $font-secondary;
     font-weight: 500; 
-
+    @include mobile{
+        font-size: font-size-mq(text);
+    }
         a {
             padding: 0.1rem 0.5rem;
-        
+            @include mobile{
+                font-size: font-size-mq(link);
+            }
         }
     }
 

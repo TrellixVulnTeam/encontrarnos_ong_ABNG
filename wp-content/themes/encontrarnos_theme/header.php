@@ -36,11 +36,16 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'logo-lg');
 <?php wp_body_open();
 
 ?>
-
+<nav id="site-navigation" class="main-navigation">
 <div class="header-bar">
+<div>
+<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="bi bi-list"></button></i>
+</div>
+<div class= "header-rss">
 <a  href="<?php the_field('facebook', 'options');?>"><i class="bi bi-facebook"></i></a>
 <a href="<?php the_field('instagram', 'options');?>"><i class="bi bi-instagram"></i></a>
 <a class= "link-padding" href="<?php the_field('twitter', 'options');?>"><i class="bi bi-twitter"></i></a>
+</div>
 </div>
 
 <div class="content-wrapper">
@@ -49,10 +54,8 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'logo-lg');
 
 		<header id="masthead" class="site-header">
 
-			<figure><img src= "<?php echo $image[0] ?>" width= "<?php echo $image_width ?>" height= "<?php echo $image_height ?> "></figure>
+			<figure class= "logo--menu"><img src= "<?php echo $image[0] ?>" width= "<?php echo $image_width ?>" height= "<?php echo $image_height ?> "></figure>
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'encontrarnos_theme' ); ?></button>
 				<?php
 				wp_nav_menu(
 					array(

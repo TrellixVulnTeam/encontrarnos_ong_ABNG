@@ -2,8 +2,10 @@
     @include flex(row, space-between, center);
         @include tablet{
     display: block;
+    margin-top: 8%;
         }
         @include mobile{
+            margin-top: 8%;
     display: block;
         }
     flex-wrap: wrap;
@@ -19,12 +21,12 @@
                 @include tablet{
                 //background-image: none;
                 background-position: top top;
-                height: 350px;
+                height: 400px;
                 }
                 @include mobile{
                 //background-image: none;
                 background-position: top top;
-                height: 300px;
+                height: 280px;
                 }
             }
     &__text{
@@ -63,8 +65,12 @@
     background-color: color(primary);
     height: 70px;
     position: sticky;
-    @include flex(row, flex-end, center);
+    @include flex(row, space-between, center);
     z-index: 999;
+}
+
+.header-rss{
+    @include flex(row, flex-end, center);
 }
 
 .site-header {
@@ -72,4 +78,20 @@
     background-color: rgba(255, 255, 255, 0.87);
     position: sticky;
     @include flex(row, center, flex-start);
+}
+
+
+.logo--menu{
+    @include tablet{
+        display: none;
+    }
+    @include mobile{
+        display: none;
+    }
+}
+
+.menu-toggle {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }

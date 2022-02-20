@@ -62,7 +62,7 @@ $img_alt = $img_data['alt'];
 		$img_alt_glosario = $img_data_glosario['alt'];
 		
 		
-		echo $img_url_glosario; ?> ' width= " <?php echo $img_width_glosario;?>" height= '<?php echo $img_height_glosarioght ; ?>' alt= '<?php echo $img_alt_glosario ?>'
+		echo $img_url_glosario; ?> ' width= " <?php echo $img_width_glosario;?>" height= '<?php echo $img_height_glosario; ?>' alt= '<?php echo $img_alt_glosario ?>'
 
 		
 		

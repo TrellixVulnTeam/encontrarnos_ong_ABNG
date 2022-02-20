@@ -164,7 +164,7 @@ $img_alt_glosario = $img_data_glosario['alt'];
 		<a href= "<?php echo home_url('/glosario') ?>"><button class= "button button--grey">Ver más</button></a>
 
 		<div class="glosario-wrapper">
-		<img class= "glosario__img" src='<?php echo $img_url_glosario; ?> ' width= " <?php echo $img_width_glosario;?>" height= '<?php echo $img_height_glosarioght ; ?>' alt= '<?php echo $img_alt_glosario ?>'
+		<img class= "glosario__img" src='<?php echo $img_url_glosario; ?> ' width= " <?php echo $img_width_glosario;?>" height= '<?php echo $img_height_glosario; ?>' alt= '<?php echo $img_alt_glosario ?>'
 		</div>
 
 	</div>
