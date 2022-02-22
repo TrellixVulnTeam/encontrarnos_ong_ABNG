@@ -5,6 +5,7 @@
 body {
   min-width: 340px;
   background-color: #FFFFFF;
+  scroll-behavior: smooth;
 }
 
 .content-wrapper {
@@ -664,10 +665,15 @@ nav {
 .site-header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
+.logo--menu {
+  padding: 0;
+  margin: 0;
+  transition: all 1s ease-in-out;
+}
 @media (min-width: 759px) and (max-width: 1049px) {
   .logo--menu {
     display: none;

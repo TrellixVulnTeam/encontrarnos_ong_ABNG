@@ -175,19 +175,22 @@ splitArray(data);
 
 //ARREGLAR ESTO
 
-// (function($){
+(function($){
   
-// $( window ).on('scroll',() => {
+  let logo_w = $('.logo--menu').width();
+  console.log(logo_w);
+$( window ).on('scroll',() => {
   
-//   var lastScrollTop = 0;
-//   var st = $(window).scrollTop();
-//   if (st > lastScrollTop){
-//   $('.logo--menu').animate({ width: '30%'}, 1000); }
-//   else {
-//   $('.logo--menu').animate({ width: '+30%'}, 1000); 
-//   }
-//   lastScrollTop = st;
+  var st = $(window).scrollTop();
+  console.log(st);
+  if( st > 0){
+  console.log($('.logo--menu').css('width', '15%'));
+  }
+  else {
+    $('.logo--menu').css('width', '639px');
+  }
+    
 
-// });
+});
   
-// })(jQuery);
+})(jQuery);

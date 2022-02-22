@@ -74,12 +74,14 @@
 }
 
 .site-header {
-    @include flex(row, center, flex-start);
+    @include flex(row, space-between, flex-start);
 }
 
 
 .logo--menu{
-    //transition: 3s ease-in-out;
+    padding: 0;
+    margin: 0;
+    transition: all 1s ease-in-out;
     @include tablet{
         display: none;
     }
