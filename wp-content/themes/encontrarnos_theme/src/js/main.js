@@ -1,10 +1,5 @@
 //SELECTS 
 
-
-//VARIABLES
-
-
-
 //SELECT ORGANISMOS 
 
 (function($){
@@ -23,10 +18,10 @@
   var names = [];
   var slugs = [];  
 
-  function splitArray(candid) {
+  function splitArray(x) {
 
-    for(var i=0; i<candid.length; i++)
-        (i % 2 == 0 ? slugs : names).push(candid[i]);
+    for(var i=0; i<x.length; i++)
+        (i % 2 == 0 ? slugs : names).push(x[i]);
     return [slugs, names];
 }
 
@@ -86,28 +81,25 @@ splitArray(data);
                   break;
           }
 
-          function append_options(){
-            if(!(select_name == 'Nacionales')){
-              if(!sel.classList.contains(newClassname)){
-                for (let i= 0; i< slugs.length-1; i++) {
-                let opt = document.createElement('option');
-                opt.className = select_name.toLowerCase();
-                opt.value = slugs[i];
-                opt.text = names[i];
-                sel.classList.add(newClassname);
-                sel.appendChild(opt);           
-                }
-            }   
+      function append_options(){
+        if(!(select_name == 'Nacionales')){
+          if(!sel.classList.contains(newClassname)){
+            for (let i= 0; i< slugs.length-1; i++) {
+            let opt = document.createElement('option');
+            opt.className = select_name.toLowerCase();
+            opt.value = slugs[i];
+            opt.text = names[i];
+            sel.classList.add(newClassname);
+            sel.appendChild(opt);           
             }
-               
+          }   
+        }
       }
-  })
-
+    })
 })(jQuery);
 
 
 //SELECT PROVINCIAS 
-
 
 (function($){
   $('#select-provincias').on('change', ()=>{
@@ -117,80 +109,51 @@ splitArray(data);
   let div_nac = document.getElementById('div-nacionales');
   $(div_nac).addClass('display--n');
 
-
   let divs = document.getElementsByClassName(select);
 
-    if ((select)){
-      $(divs).addClass("display--b");
-      $(divs).removeClass("display--n");
+    if ((select)) $(divs).removeClass("display--n");
 
-}
-      $('#select-provincias').on('change', (e) =>{
-        e.preventDefault();
-
-        $(divs).addClass("display--n");
-        
-        
-        
-      })
-    
+    $('#select-provincias').on('change', () =>{
+        $(divs).addClass("display--n");  
+        divs = document.getElementsByClassName(select + " display--n");
+    })
   })
-  
 })(jQuery);
 
-//MODAL
 
+//MODAL
 
 (function($){
   $('.card').on('click', (e)=>{
   
-    let id = e.currentTarget.id
-    console.log(id);
+  let id = e.currentTarget.id;
 
   let cards = document.getElementsByClassName('display--n');
   for (let index = 0; index < cards.length; index++) {
     if (cards[index].classList.contains(id)){
       cards[index].classList.remove('display--n');
-      cards[index].classList.add('display--b');
-    }
+      cards[index].classList.add('display--b'); }
     $('.modal').on('click', (e)=>{
-      console.log('hice click');
       $('.modal').removeClass('display--b');
       $('.modal').addClass('display--n');
-      
-    })
-    
-  }
-
-  //$(cards).addClass('display--b');
-
-  //$('.card-wrapper').addClass('modal');
-  
+      }) 
+    }
   })
-  
 })(jQuery);
   
 
 //SCROLL
 
-//ARREGLAR ESTO
 
 (function($){
   
-  let logo_w = $('.logo--menu').width();
-  console.log(logo_w);
 $( window ).on('scroll',() => {
   
   var st = $(window).scrollTop();
-  console.log(st);
-  if( st > 0){
-  console.log($('.logo--menu').css('width', '15%'));
-  }
-  else {
-    $('.logo--menu').css('width', '639px');
-  }
-    
 
+  if( st > 0) $('.logo--menu').css('width', '15%'); 
+  else $('.logo--menu').css('width', '639px');  
+  
 });
   
 })(jQuery);

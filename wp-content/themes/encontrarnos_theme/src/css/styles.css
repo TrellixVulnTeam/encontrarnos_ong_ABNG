@@ -127,6 +127,14 @@ li {
   margin-bottom: 10%;
 }
 
+.display--b {
+  display: block;
+}
+
+.display--n {
+  display: none;
+}
+
 #wpforms-submit-227, #wpforms-submit-213, #wpforms-submit-26, .button {
   background-color: #F2AC45;
   font-size: 1.5rem;
@@ -672,7 +680,7 @@ nav {
 .logo--menu {
   padding: 0;
   margin: 0;
-  transition: all 1s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 @media (min-width: 759px) and (max-width: 1049px) {
   .logo--menu {
@@ -1082,14 +1090,6 @@ details[open] > summary .bi-chevron-compact-down {
 .glosario__img {
   margin-right: 5%;
   margin-bottom: 3%;
-}
-
-.display--b {
-  display: block;
-}
-
-.display--n {
-  display: none;
 }
 
 .select-wrapper {
