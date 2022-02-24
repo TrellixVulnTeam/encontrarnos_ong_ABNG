@@ -127,6 +127,10 @@ li {
   margin-bottom: 10%;
 }
 
+.post-type-archive {
+  margin: 0 0 1.5em;
+}
+
 #wpforms-submit-227, #wpforms-submit-213, #wpforms-submit-26, .button {
   background-color: #F2AC45;
   font-size: 1.5rem;

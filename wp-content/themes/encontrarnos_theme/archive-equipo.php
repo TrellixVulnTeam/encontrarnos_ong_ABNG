@@ -47,8 +47,8 @@ $img_alt = $img_data['alt'];
 
 <!-- MAIN -->
 <main id="primary" class="site-main">
-	<!-- CONTENT WRAPPER -->
-	<div class="content-wrapper">
+<!-- CONTENT WRAPPER -->
+<div class="content-wrapper">
 	<!-- SECTION MISION -->
 		<section>
 			<h3 id= "mision" class="title title--left"><span class="title__span title__span--green"></span>Nuestra Misión</h3>
@@ -102,10 +102,10 @@ $img_alt = $img_data['alt'];
 		</section>
 	</div>
 	<!-- END CARDS BACKGROUND	 -->
-	</div>
-	<!-- END CONTENT WRAPPER -->
+</div>
+<!-- END CONTENT WRAPPER -->
 </main>
-<!-- END MAIN -->
+	<!-- END MAIN -->
 
 <?php
 get_footer();
