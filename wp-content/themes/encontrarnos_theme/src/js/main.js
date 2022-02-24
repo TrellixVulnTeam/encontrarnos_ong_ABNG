@@ -13,9 +13,8 @@
     return el.trim();
   });  
 
-  
-  var names = [];
-  var slugs = [];  
+  let names = [];
+  let slugs = [];  
 
   function splitArray(x) {
 
@@ -30,9 +29,7 @@ splitArray(data);
   let sel = document.getElementById('select-provincias');
   let newClassname = select_name.toLowerCase() + '--done';
           
-          if(!sel.classList.contains(newClassname)){
-              append_options(); 
-          }
+          if(!sel.classList.contains(newClassname)) append_options(); 
           
           let provinciales = document.getElementsByClassName('provinciales');
           let ongs = document.getElementsByClassName('ongs');
@@ -128,6 +125,7 @@ splitArray(data);
   let id = e.currentTarget.id;
 
   let cards = document.getElementsByClassName('display--n');
+
   for (let i = 0; i < cards.length; i++) {
     if (cards[i].classList.contains(id)){
       cards[i].classList.remove('display--n');
@@ -148,10 +146,10 @@ splitArray(data);
   
 $( window ).on('scroll',() => {
   
-  var st = $(window).scrollTop();
+  let st = $(window).scrollTop();
 
   if( st > 0) $('.logo--menu').css('width', '15%'); 
-  else $('.logo--menu').css('width', '639px');  
+  else $('.logo--menu').css('width', '729px');  
   
 });
   
