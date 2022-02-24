@@ -1,58 +1,48 @@
 //HERO
 
+//BACKGROUND
+
 .hero {
     padding: 5% 0;
     @include flex(row, space-between, center);
-        @include tablet{
-    display: block;
-    //margin-top: 8%;
-        }
-        @include tv{
-            padding: 15% 0;
-                }
-        @include mobile{
-            //margin-top: 8%;
-    display: block;
-        }
+    @include tv {
+        padding: 15% 0; }
+    @include tablet {
+        display: block; }
+    @include mobile {
+        display: block; }
     flex-wrap: wrap;
-    &__bg{
+    &__bg {
         margin: 0;
         padding: 0;
         background-image: url(image(hero));
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            @include desktop{
-                height: 600px;
-                }
+            @include desktop {
+                height: 600px; }
             }
+        }
+
+//TEXT AND IMG
+
+.hero {
     &__text{
         width: 50%;
         @include flex(column, flex-start,  flex-start);
-        @include tablet{
-            width: 80%;
-                }
-                @include mobile{
-                    width: 100%;
-                }
-            }
-    &__img{
-        // position: relative;
-        // top: -50px;
+        @include tablet {
+            width: 80%; }
+        @include mobile {
+            width: 100%; }
+    }
+    &__img {
         border-radius: 50%;
-        @include desktop{
-            width: 40%;
-        }
-        @include tablet{
-            width: 40%;
-            top: 50px;
-            display: none;
-        }
-        @include mobile{
-            width: 40%;
-            top: 30px;
-            display: none;
-        }
+        @include desktop {
+            width: 40%; }
+        @include tablet {
+            display: none; }
+        @include mobile {
+            display: none; }
     }
 }
 
@@ -72,18 +62,19 @@
     @include flex(row, space-between, flex-start);
 }
 
+//LOGO
 
 .logo--menu{
     padding: 0;
     margin: 0;
     transition: all 1.5s ease-in-out;
-    @include tablet{
-        display: none;
-    }
-    @include mobile{
-        display: none;
-    }
+    @include tablet {
+        display: none; }
+    @include mobile {
+        display: none; }
 }
+
+//MENU MOBILE
 
 .menu-toggle {
     cursor: pointer;

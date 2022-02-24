@@ -1,30 +1,34 @@
-.section-wrapper{
+.section-wrapper {
 
-&--01{
-    background-image: url(image(vector03));
-    background-repeat: no-repeat;
-    background-position: center;
-    @include mobile{
-        background-image: none; } } 
+    &--01{
+        background-image: url(image(vector03));
+        background-repeat: no-repeat;
+        background-position: center;
+        @include mobile {
+            background-image: none; } } 
 
-&--p {
-    padding: 15% 0;
+    &--p {
+        padding: 15% 0; }
 }
-&--02{
-    background-image: url(image(vector04));
-    background-repeat: no-repeat;
-    background-position: center;
-    @include mobile{
-        background-image: none; } }
 
-&--flex{
-    padding: 10% 0;
-    @include flex(row, center, center);
-    &--col{
-        @include flex(column, center, flex-start); 
-        p {
-            width: 80%;
-            margin: 3% 2%; }   
+.section-wrapper {
+
+    &--02 {
+        background-image: url(image(vector04));
+        background-repeat: no-repeat;
+        background-position: center;
+        @include mobile {
+            background-image: none; } }
+
+    &--flex {
+        padding: 10% 0;
+        @include flex(row, center, center);
+        &--col {
+            @include flex(column, center, flex-start); 
+            p {
+                width: 80%;
+                margin: 3% 2%; 
+            }   
         }
     }
 }

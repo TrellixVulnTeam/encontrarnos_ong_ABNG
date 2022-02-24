@@ -4,4 +4,4 @@
         <p class= "table__item-2"><?php the_sub_field('productos-y-servicios-de-genealogia');?></p>
         <p class= "table__item-3"><?php the_sub_field('descripcion');?></p>
     <?php endwhile; ?>
-    <?php endif; ?>
+<?php endif; ?>

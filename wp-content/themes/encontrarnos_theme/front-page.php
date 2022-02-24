@@ -176,7 +176,7 @@ $img_alt_glosario = $img_data_glosario['alt'];
 
 <section>
 	<div class="section-wrapper--02">
-		<div class="content-wrapper section-wrapper--flex">
+		<div class="content-wrapper section-wrapper--flex section-wrapper--flex">
 			<div class="section-wrapper--flex section-wrapper--flex--col">
 				<h3 class="title title--left"><span class="title__span title__span--green"></span>Organismos</h3>
 				<p>Consultá los organismos Nacionales y Provinciales....</p>
