@@ -30,33 +30,26 @@
         font-weight: 900;
         padding: 0 10%;
         border-radius: 50%;
-        @include desktop{
-            font-size: font-size-mq(sub-title);
-        }
-        @include tablet{
-            font-size: font-size-mq(sub-title);
-        }
-        @include mobile{
-            font-size: font-size-mq--mobile(sub-title);
-        }
+        @include desktop {
+            font-size: font-size-mq(sub-title); }
+        @include tablet {
+            font-size: font-size-mq(sub-title); }
+        @include mobile {
+            font-size: font-size-mq--mobile(sub-title); }
     }
     &-chevron-compact-down{
         font-size: font-size(sub-title);
         font-weight: 900;
         color: color(text);
-        @include desktop{
-            font-size: font-size-mq(sub-title);
-        }
-        @include tablet{
-            font-size: font-size-mq(sub-title);
-        }
-        @include mobile{
-            font-size: font-size-mq--mobile(sub-title);
-        }
-        &:hover{
+        @include desktop {
+            font-size: font-size-mq(sub-title); }
+        @include tablet {
+            font-size: font-size-mq(sub-title); }
+        @include mobile {
+            font-size: font-size-mq--mobile(sub-title); }
+        &:hover {
             transition: $link-transition;
-            color: lighten(color(text), 10%);
-        }
+            color: lighten(color(text), 10%); }
     }
 }
 
@@ -80,3 +73,5 @@ details[open] > summary .bi-chevron-compact-down {
             width: 35%; }
     }
 }
+
+

@@ -6,15 +6,12 @@
     border-radius: 220px;
     padding: 1% 2.5%;
     cursor: pointer;
-    @include desktop{
-        font-size: font-size-mq(button-text);
-    }
-    @include tablet{
-        font-size: font-size-mq(button-text);
-    }
-    @include mobile{
-        font-size: font-size-mq--mobile(button-text);
-    }
+    @include desktop {
+        font-size: font-size-mq(button-text); }
+    @include tablet {
+        font-size: font-size-mq(button-text); }
+    @include mobile {
+        font-size: font-size-mq--mobile(button-text); }
 }
 
 .button {
@@ -33,7 +30,6 @@
 #wpforms-submit-26 {
 @extend %button;
 padding: 2.5% 7%;
-
 }
 
 #wpforms-submit-213 {
