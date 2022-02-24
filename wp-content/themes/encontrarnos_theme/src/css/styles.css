@@ -1087,6 +1087,11 @@ details[open] > summary .bi-chevron-compact-down {
   margin-right: 5%;
   margin-bottom: 3%;
 }
+@media (max-width: 759px) {
+  .glosario__img {
+    width: 35%;
+  }
+}
 
 .display--b {
   display: block;

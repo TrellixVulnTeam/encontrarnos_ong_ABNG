@@ -70,11 +70,13 @@ details[open] > summary .bi-chevron-compact-down {
 }
 
 .glosario{
-    &-wrapper{
+    &-wrapper {
         @include flex(row, flex-end, flex-end);
     }
     &__img{
         margin-right: 5%;
         margin-bottom: 3%;
+        @include mobile {
+            width: 35%; }
     }
 }
