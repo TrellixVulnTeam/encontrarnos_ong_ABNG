@@ -1,25 +1,27 @@
-.section-wrapper {
-
+.section-bg {
     &--01{
-        background-image: url(image(vector03));
+        background-image: url(image(vector01));
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
+        @include tv {
+            padding: 20% 0; }   
         @include mobile {
-            background-image: none; } } 
-
-    &--p {
-        padding: 15% 0; }
+            background-image: none; } 
+        } 
 }
 
-.section-wrapper {
-
-    &--02 {
+.section {
+    &-bg--02 {
         background-image: url(image(vector04));
         background-repeat: no-repeat;
         background-position: center;
         @include mobile {
-            background-image: none; } }
+            background-image: none; } 
+    }
+}
 
+.section {
     &--flex {
         padding: 10% 0;
         @include flex(row, center, center);
@@ -30,5 +32,12 @@
                 margin: 3% 2%; 
             }   
         }
+    }
+}
+
+.mt {
+    margin-top: 15%;
+    &--5{
+        margin-top: 5%;
     }
 }

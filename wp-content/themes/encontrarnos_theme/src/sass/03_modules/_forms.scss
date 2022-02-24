@@ -34,10 +34,6 @@
     
 }
 
-.section-wrapper-censo{
-    padding: 3% 0;
-}
-
 
 .wpforms
 {
@@ -96,7 +92,6 @@
 .wpforms-field-large {
     border: 2px solid #B6B6B6 !important;
     border-radius: 4px !important;
-    &:hover{
-           border-color: #F2AC45 !important;
-    }
+    &:hover {
+        border-color: #F2AC45 !important; }
 }
