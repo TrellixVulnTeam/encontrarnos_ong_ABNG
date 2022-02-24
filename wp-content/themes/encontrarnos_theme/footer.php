@@ -31,9 +31,9 @@ $image_height = $image[2];
 				<div class="footer-wrapper">
 					<!-- LOGO & RSS-->
 					<div class="footer-logo">
-						<figure class= "logo">
+						<a href= " <?php echo home_url(); ?> " ><figure class= "logo">
 							<img src= "<?php echo $image[0] ?>" width= "<?php echo $image_width ?>" height= "<?php echo $image_height ?>">
-						</figure>
+						</figure></a>
 
 						<p class="li--bold"> Seguinos </p>
 						<!-- RSS -->

@@ -58,7 +58,7 @@ $image_height = $image[2];
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'encontrarnos_theme' ); ?></a>
 			<header id="masthead" class="site-header">
 				<!-- LOGO -->
-				<figure class= "logo--menu"><img src= "<?php echo $image[0] ?>" width= "<?php echo $image_width ?>" height= "<?php echo $image_height ?> "></figure>
+				<a href= "<?php echo home_url(); ?>"><figure class= "logo--menu"><img src= "<?php echo $image[0] ?>" width= "<?php echo $image_width ?>" height= "<?php echo $image_height ?> "></figure></a>
 				<!-- END LOGO -->
 				<?php
 				wp_nav_menu(
