@@ -13,8 +13,9 @@
     return el.trim();
   });  
 
-  let names = [];
-  let slugs = [];  
+  
+  var names = [];
+  var slugs = [];  
 
   function splitArray(x) {
 
@@ -29,53 +30,53 @@ splitArray(data);
   let sel = document.getElementById('select-provincias');
   let newClassname = select_name.toLowerCase() + '--done';
           
-          if(!sel.classList.contains(newClassname)) append_options(); 
+  if(!sel.classList.contains(newClassname)){
+      append_options(); 
+  }
           
-          let provinciales = document.getElementsByClassName('provinciales');
-          let ongs = document.getElementsByClassName('ongs');
-          let div = document.createElement('div');
-          let div_nac = document.getElementById('div-nacionales');
-          switch(select_name){
-                  case "Nacionales":
-                    $(div_nac).removeClass('display--n');
-                    $(div_nac).addClass('display--b');
-                    if(!(div_nac.classList.contains(newClassname))){
-                    
-                    div.className = 'content';
-                    div.innerHTML = select;
-                    div_nac.appendChild(div);
-                    div_nac.classList.add(newClassname);
-                    $(div).addClass("display--b");
-                      $(provinciales).addClass("display--n");
-                      $(ongs).addClass("display--n");
-                      $(div).removeClass("display--n");
-                      $(ongs).removeClass("display--b");
-                      $(provinciales).removeClass("display--b");}
-                      break;
-                  case "Provinciales":
-                      $(provinciales).addClass("display--b");
-                      $(ongs).addClass("display--n");
-                      $(div).addClass("display--n");
-                      $(provinciales).removeClass("display--n");
-                      $(ongs).removeClass("display--b");
-                      $(div).removeClass("display--b");
-                  break;
-                  case "ONGs":
-                      $(ongs).addClass("display--b");
-                      $(provinciales).addClass("display--n");
-                      $(div).addClass("display--n");
-                      $(provinciales).removeClass("display--b");
-                      $(ongs).removeClass("display--n");
-                      $(div).removeClass("display--b");
-                  break;
-                  
-                  default: 
-                      $(provinciales).addClass("display--n");
-                      $(ongs).addClass("display--n");
-                      $(div).addClass("display--n");
-                      
-                  break;
-          }
+  let provinciales = document.getElementsByClassName('provinciales');
+  let ongs = document.getElementsByClassName('ongs');
+  let div = document.createElement('div');
+  let div_nac = document.getElementById('div-nacionales');
+  switch(select_name){
+          case "Nacionales":
+            $(div_nac).removeClass('display--n');
+            $(div_nac).addClass('display--b');
+            if(!(div_nac.classList.contains(newClassname))){  
+                div.className = 'content';
+                div.innerHTML = select;
+                div_nac.appendChild(div);
+                div_nac.classList.add(newClassname);
+                $(div).addClass("display--b");
+                $(provinciales).addClass("display--n");
+                $(ongs).addClass("display--n");
+                $(div).removeClass("display--n");
+                $(ongs).removeClass("display--b");
+                $(provinciales).removeClass("display--b");
+              }
+          break;
+          case "Provinciales":
+              $(provinciales).addClass("display--b");
+              $(ongs).addClass("display--n");
+              $(div).addClass("display--n");
+              $(provinciales).removeClass("display--n");
+              $(ongs).removeClass("display--b");
+              $(div).removeClass("display--b");
+          break;
+          case "ONGs":
+              $(ongs).addClass("display--b");
+              $(provinciales).addClass("display--n");
+              $(div).addClass("display--n");
+              $(provinciales).removeClass("display--b");
+              $(ongs).removeClass("display--n");
+              $(div).removeClass("display--b");
+          break;
+          default: 
+              $(provinciales).addClass("display--n");
+              $(ongs).addClass("display--n");
+              $(div).addClass("display--n");
+          break;
+        }
 
       function append_options(){
         if(!(select_name == 'Nacionales')){
@@ -107,7 +108,11 @@ splitArray(data);
 
   let divs = document.getElementsByClassName(select);
 
-    if ((select)) $(divs).removeClass("display--n");
+  if ((select)) $(divs).removeClass("display--n");
+
+    $('#select-organismos').on('change', () =>{
+        $(divs).addClass("display--n");
+    })
 
     $('#select-provincias').on('change', () =>{
         $(divs).addClass("display--n");  
@@ -123,14 +128,13 @@ splitArray(data);
   $('.card').on('click', (e)=>{
   
   let id = e.currentTarget.id;
-
   let cards = document.getElementsByClassName('display--n');
-
+  
   for (let i = 0; i < cards.length; i++) {
     if (cards[i].classList.contains(id)){
       cards[i].classList.remove('display--n');
       cards[i].classList.add('display--b'); }
-    $('.modal').on('click', (e)=>{
+    $('.modal').on('click', ()=>{
       $('.modal').removeClass('display--b');
       $('.modal').addClass('display--n');
       }) 
