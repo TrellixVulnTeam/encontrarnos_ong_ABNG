@@ -10,7 +10,7 @@
     &--bg {
         background: 
         url(image(vector03))  no-repeat top, 
-        url(image(vector03))  no-repeat bottom;
+        url(image(vector04))  no-repeat bottom;
         background-repeat: repeat-y space;
         @include mobile{
             background-image: none; }
@@ -128,6 +128,7 @@
     top: 0;
     width: 100%;
     height: 100vh;
+    z-index: 999;
     background: rgba(0, 0, 0, 0.959);
     @include mobile {
         @include flex(column, center, center); }

@@ -21,9 +21,6 @@ $img_alt = $img_data['alt'];
 
 ?> 
 
-
-<main id="primary" class="site-main">
-
 <!-- HERO -->
 
 <!-- HERO BACKGROUND  -->

@@ -2,7 +2,7 @@ nav {
     background-color: color(background);
     top: 0;
     position: sticky;
-    z-index: 999;
+    z-index: 1;
     @include desktop {
         padding-bottom: 2%; }
     @include tablet {
