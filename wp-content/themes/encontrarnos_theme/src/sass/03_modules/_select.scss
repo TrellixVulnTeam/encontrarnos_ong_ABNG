@@ -1,3 +1,12 @@
+.display--b {
+    display: block;
+}
+
+.display--n{
+    display: none;
+}
+
+
 .select-wrapper{
     margin-bottom: 2%;
     @include flex(column, flex-start, flex-start);

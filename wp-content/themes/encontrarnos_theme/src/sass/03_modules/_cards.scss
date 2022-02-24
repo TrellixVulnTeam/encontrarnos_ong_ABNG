@@ -4,28 +4,18 @@
     align-items: stretch;
     margin: auto;
 
-    @include desktop{
-    }
-    @include tablet{
-    }
     @include mobile{
-        @include flex(column, space-between, space-between);
-    }
+        @include flex(column, space-between, space-between); }
 
-    &--bg{
+    &--bg {
         background: 
         url(image(vector03))  no-repeat top, 
-        url(image(vector04))  no-repeat bottom;
+        url(image(vector03))  no-repeat bottom;
         background-repeat: repeat-y space;
-        @include desktop{
-        }
-        @include tablet{
-        }
         @include mobile{
-            background-image: none;
-        }
+            background-image: none; }
     }
-    }
+}
 
 .card {
     @include flex(column, flex-start, center);
@@ -38,20 +28,21 @@
     width: 30%;    
     transition: 0.5s ease-in-out;
 
-    @include tablet{
-        width: 40%;    
-    }
+    @include tablet {
+        width: 40%; }
 
     @include mobile{
         margin: 2% 15%;
-        width: 70%;    
-    }
+        width: 70%; }
 
     &:hover{
         transform: scale(99%);
         cursor: pointer;
     }
-        &__title{
+}
+    
+.card { 
+    &__title {
             margin: 0;
             padding: 0;
             width: 100%;
@@ -59,80 +50,77 @@
                 width: 110%;
                 text-align: left;
                 @include desktop{
-                    width:100%;
-                }
-                @include tablet{
-                    width: 90%;
-                }
-                @include mobile{
-                    width:100%;
-                }
+                    width:100%; }
+                @include tablet {
+                    width: 90%; }
+                @include mobile { width:100%; }
             }
             &--modal{
                 color:color(background);
             }
         }
-        &__subtitle{
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            &--modal{
-                color:color(background);
-            }
+    &__subtitle {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        &--modal{
+            color:color(background);
         }
-        &__img{
-            margin: 0;
-            padding: 15px;
-            width: 110%;
-            @include mobile{
-                width: 90%;        
-            }
-            &--nw{
-                width: 30%;
-                @include mobile{
-                    display: none;       
-                }
-            }
-            &--br{
-                padding: 40px;
-                border-radius: 50%;
-            }
-        }
-        &__text{
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            @include mobile{
-                margin: auto;        
-            }
-            &--left{
-                text-align: left;
-            }
-            &--modal{
-                color: color(background);
-
-            }
-        }
+    }
 }
 
+.card {
+    &__img{
+        margin: 0;
+        padding: 15px;
+        width: 110%;
+        @include mobile {
+            width: 90%; }
+        &--nw {
+            width: 30%;
+            @include mobile {
+                display: none; }
+        }
+        &--br {
+            padding: 40px;
+            border-radius: 50%; 
+        }
+    } 
+}
 
-
+.card{
+    &__text{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        @include mobile {
+            margin: auto; }
+        &--left {
+            text-align: left;
+        }
+        &--modal {
+            color: color(background);
+        }
+    }   
+}
 
 .card__text-wrapper {
     width: 90%;
     margin-bottom: 10%;
-    &--modal{
+    &--modal {
         text-align: center;
         margin: 0;
         width: 60%;
         @include mobile{
             margin: auto;   
-            width: 80%;  
-        }
+            width: 80%; }
     }
 }
 
+//MODAL
+
 .modal {
+    @include flex(row, center, center);
     cursor: pointer;
     position: fixed;
     margin:auto;
@@ -141,9 +129,7 @@
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.959);
-    @include flex(row, center, center);
     @include mobile{
-        @include flex(column, center, center); 
-    }
+        @include flex(column, center, center); }
 }
 

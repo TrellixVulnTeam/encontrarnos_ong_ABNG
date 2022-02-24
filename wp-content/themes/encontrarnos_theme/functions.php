@@ -122,7 +122,7 @@ add_action( 'after_setup_theme', 'encontrarnos_theme_content_width', 0 );
  */
 function encontrarnos_theme_widgets_init() {
 	register_sidebar(
-		array(
+	array(
 			'name'          => esc_html__( 'Sidebar', 'encontrarnos_theme' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'encontrarnos_theme' ),

@@ -36,3 +36,9 @@
         @content;
     }
 }
+
+@mixin tv {
+    @media (min-width: 1980px) {
+        @content;
+    }
+}

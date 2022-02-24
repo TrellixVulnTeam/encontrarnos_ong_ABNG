@@ -3,10 +3,13 @@
 &--01{
     background-image: url(image(vector03));
     background-repeat: no-repeat;
-    background-position: bottom bottom;
-    background-size: cover;
+    background-position: center;
     @include mobile{
         background-image: none; } } 
+
+&--p {
+    padding: 15% 0;
+}
 &--02{
     background-image: url(image(vector04));
     background-repeat: no-repeat;

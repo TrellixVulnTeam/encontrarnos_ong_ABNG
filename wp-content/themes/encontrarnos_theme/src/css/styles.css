@@ -127,14 +127,6 @@ li {
   margin-bottom: 10%;
 }
 
-.display--b {
-  display: block;
-}
-
-.display--n {
-  display: none;
-}
-
 #wpforms-submit-227, #wpforms-submit-213, #wpforms-submit-26, .button {
   background-color: #F2AC45;
   font-size: 1.5rem;
@@ -217,13 +209,15 @@ a:hover {
 .section-wrapper--01 {
   background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 739.59'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E04_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M913.69,477.43c323.25-137.75,903.06-139,1006.31-137.08V961.1c-465.33-50.36-586,191.39-1920,96V602.17C305.78,609.37,590.45,615.22,913.69,477.43Z' transform='translate(0 -340)'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: bottom bottom;
-  background-size: cover;
+  background-position: center;
 }
 @media (max-width: 759px) {
   .section-wrapper--01 {
     background-image: none;
   }
+}
+.section-wrapper--p {
+  padding: 15% 0;
 }
 .section-wrapper--02 {
   background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 573.39'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E04_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M951,296.75C521.76,206.53,328.58,190.47,0,271.14L1,690C325.5,827.18,985.5,679.91,1440,792.3V327C1302.84,339.77,1152.86,339.19,951,296.75Z' transform='translate(0 -218.91)'/%3E%3C/svg%3E");
@@ -503,7 +497,7 @@ html footer {
 }
 
 nav {
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: #FFFFFF;
   top: 0;
   position: sticky;
   z-index: 999;
@@ -570,6 +564,7 @@ nav {
 }
 
 .hero {
+  padding: 5% 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -579,37 +574,29 @@ nav {
 @media (min-width: 759px) and (max-width: 1049px) {
   .hero {
     display: block;
-    margin-top: 8%;
+  }
+}
+@media (min-width: 1980px) {
+  .hero {
+    padding: 15% 0;
   }
 }
 @media (max-width: 759px) {
   .hero {
-    margin-top: 8%;
     display: block;
   }
 }
 .hero__bg {
-  background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7072 2466'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3ESin título-1%3C/title%3E%3Cpath class='cls-1' d='M6922-1079.95c-656.08,233.64-1816.57,413.16-3366,55.79C1950-1394.57,613.4-1303.35-150-1152.11V1182c639.12-26.8,1691.54-151.49,2924.12-515C4164.42,257,5904.33,688.37,6922,1074.2Z' transform='translate(150 1284)'/%3E%3C/svg%3E");
+  margin: 0;
+  padding: 0;
+  background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2415.41 804.09'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7%3B%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EVector 9%3C/title%3E%3Cpath class='cls-1' d='M2414.91 66.53c-224.08 76.19-620.44 134.72-1149.65 18.2C716.75-36 260.24-6.31-.5 43V804.09c218.29-8.74 577.74-49.4 998.72-167.92 474.85-133.69 1069.11 7 1416.69 132.77Z' transform='translate(0.5 0)'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 800px;
 }
 @media (min-width: 1049px) and (max-width: 1500px) {
   .hero__bg {
     height: 600px;
-  }
-}
-@media (min-width: 759px) and (max-width: 1049px) {
-  .hero__bg {
-    background-position: top top;
-    height: 400px;
-  }
-}
-@media (max-width: 759px) {
-  .hero__bg {
-    background-position: top top;
-    height: 280px;
   }
 }
 .hero__text {
@@ -630,8 +617,6 @@ nav {
   }
 }
 .hero__img {
-  position: relative;
-  top: 80px;
   border-radius: 50%;
 }
 @media (min-width: 1049px) and (max-width: 1500px) {
@@ -717,7 +702,7 @@ nav {
   }
 }
 .card-wrapper--bg {
-  background: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 739.59'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E04_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M913.69,477.43c323.25-137.75,903.06-139,1006.31-137.08V961.1c-465.33-50.36-586,191.39-1920,96V602.17C305.78,609.37,590.45,615.22,913.69,477.43Z' transform='translate(0 -340)'/%3E%3C/svg%3E") no-repeat top, url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 573.39'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E04_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M951,296.75C521.76,206.53,328.58,190.47,0,271.14L1,690C325.5,827.18,985.5,679.91,1440,792.3V327C1302.84,339.77,1152.86,339.19,951,296.75Z' transform='translate(0 -218.91)'/%3E%3C/svg%3E") no-repeat bottom;
+  background: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 739.59'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E04_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M913.69,477.43c323.25-137.75,903.06-139,1006.31-137.08V961.1c-465.33-50.36-586,191.39-1920,96V602.17C305.78,609.37,590.45,615.22,913.69,477.43Z' transform='translate(0 -340)'/%3E%3C/svg%3E") no-repeat top, url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 739.59'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e1f2e7;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3E04_vector_bg%3C/title%3E%3Cpath class='cls-1' d='M913.69,477.43c323.25-137.75,903.06-139,1006.31-137.08V961.1c-465.33-50.36-586,191.39-1920,96V602.17C305.78,609.37,590.45,615.22,913.69,477.43Z' transform='translate(0 -340)'/%3E%3C/svg%3E") no-repeat bottom;
   background-repeat: repeat-y space;
 }
 @media (max-width: 759px) {
@@ -755,6 +740,7 @@ nav {
   transform: scale(99%);
   cursor: pointer;
 }
+
 .card__title {
   margin: 0;
   padding: 0;
@@ -790,6 +776,7 @@ nav {
 .card__subtitle--modal {
   color: #FFFFFF;
 }
+
 .card__img {
   margin: 0;
   padding: 15px;
@@ -812,6 +799,7 @@ nav {
   padding: 40px;
   border-radius: 50%;
 }
+
 .card__text {
   text-align: center;
   margin: 0;
@@ -846,6 +834,10 @@ nav {
 }
 
 .modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   position: fixed;
   margin: auto;
@@ -854,10 +846,6 @@ nav {
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.959);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 @media (max-width: 759px) {
   .modal {
@@ -1090,6 +1078,14 @@ details[open] > summary .bi-chevron-compact-down {
 .glosario__img {
   margin-right: 5%;
   margin-bottom: 3%;
+}
+
+.display--b {
+  display: block;
+}
+
+.display--n {
+  display: none;
 }
 
 .select-wrapper {

@@ -52,9 +52,9 @@ $img_alt = $img_data['alt'];
 <!-- PREGUNTAS FRECUENTES -->
 
 </div>
-<div class="section-wrapper--01">
 <section>
-<div class="content-wrapper section-wrapper--m">
+<div class="section-wrapper--01">
+<div class="content-wrapper section-wrapper--m section-wrapper--p">
 	<h3 class="title"><span class="title__span"></span>Preguntas Frecuentes</h3>
 	<h5 class="title title--left title--mb-0 title--mt">Sobre Búsquedas</h5>
 					<?php 
@@ -128,8 +128,8 @@ $img_alt = $img_data['alt'];
 				<a href= "<?php echo home_url('/faqs') ?>"><button class= "button button--center">Ver más</button></a>
 			</div>
 
-</section>
 </div>
+</section>
 
 <!-- GLOSARIO -->
 

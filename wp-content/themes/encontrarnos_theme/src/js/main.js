@@ -7,7 +7,6 @@
 
   let select = $('#select-organismos').val();
   let select_name = $('#select-organismos').find('option:selected').text();
-  let option = document.querySelector("option");
 
   let data = select.split(",");
   data = data.map((el)=>{
@@ -129,10 +128,10 @@ splitArray(data);
   let id = e.currentTarget.id;
 
   let cards = document.getElementsByClassName('display--n');
-  for (let index = 0; index < cards.length; index++) {
-    if (cards[index].classList.contains(id)){
-      cards[index].classList.remove('display--n');
-      cards[index].classList.add('display--b'); }
+  for (let i = 0; i < cards.length; i++) {
+    if (cards[i].classList.contains(id)){
+      cards[i].classList.remove('display--n');
+      cards[i].classList.add('display--b'); }
     $('.modal').on('click', (e)=>{
       $('.modal').removeClass('display--b');
       $('.modal').addClass('display--n');
