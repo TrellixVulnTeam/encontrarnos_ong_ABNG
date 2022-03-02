@@ -152,7 +152,7 @@ $( window ).on('scroll',() => {
   
   let st = $(window).scrollTop();
 
-  if( st > 0) $('.logo--menu').css('width', '15%'); 
+  if( st > 0) $('.logo--menu').css('width', '35%'); 
   else $('.logo--menu').css('width', '729px');  
   
 });

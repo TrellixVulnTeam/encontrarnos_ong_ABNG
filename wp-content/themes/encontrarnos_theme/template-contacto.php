@@ -52,7 +52,7 @@ $img_alt = $img_data['alt'];
 			<!-- FORM WRAPPER -->
 			<div class="form-wrapper">
 				<!-- RSS -->
-				<div class="form-wrapper form-wrapper--rs">
+				<div class="rss rss--form">
 					<h6>Contactate con nosotros</h6>
 					<ul class= "ul-form-contact">
 						<li>Teléfonos: <?php the_field('telefonos');?>
@@ -65,8 +65,8 @@ $img_alt = $img_data['alt'];
 						<a class= "link-padding" href="#twitter"><i class="bi bi-twitter bi--form"></i></a>
 						</li>
 					</ul>
-					</div>
-					<!-- END RSS -->
+				</div>
+				<!-- END RSS -->
 				<?php echo do_shortcode('[wpforms id="26" title="true" description="false"]');?>
 			</div>
 			<!-- END FORM WRAPPER -->

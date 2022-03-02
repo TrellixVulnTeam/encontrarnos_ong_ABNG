@@ -55,7 +55,7 @@ $img_alt = $img_data['alt'];
 	<!-- SECTION PREGUNTAS FRECUENTES -->
 	<section class = "mt">
 		<!-- SECTION BACKGROUND -->
-		<div class="section-bg--01">
+		<div class="section--bg-01">
 		<!-- CONTENT WRAPPER -->
 			<div class="content-wrapper">
 				<h3 class="title"><span class="title__span"></span>Preguntas Frecuentes</h3>
@@ -161,8 +161,8 @@ $img_alt = $img_data['alt'];
 			<!-- END TABLE -->
 			<a href= "<?php echo home_url('/glosario') ?>"><button class= "button button--grey">Ver más</button></a>
 			<!-- IMG GLOSARIO -->
-			<div class="glosario-wrapper">
-				<img class= "glosario__img" src='<?php echo $img_url_glosario; ?> ' width= " <?php echo $img_width_glosario;?>" height= '<?php echo $img_height_glosario; ?>' alt= '<?php echo $img_alt_glosario ?>'>
+			<div class="glosario-img-wrapper">
+				<img class= "glosario-img__img" src='<?php echo $img_url_glosario; ?> ' width= " <?php echo $img_width_glosario;?>" height= '<?php echo $img_height_glosario; ?>' alt= '<?php echo $img_alt_glosario ?>'>
 			</div>
 			<!-- END IMG GLOSARIO -->
 		</section>		
@@ -173,7 +173,7 @@ $img_alt = $img_data['alt'];
 	<!-- SECTION ORGANISMOS Y PAGS UTILES  -->
 	<section>
 		<!-- SECTION BACKGROUND -->
-		<div class="section-bg--02">
+		<div class="section--bg-02">
 			<!-- CONTENT WRAPPER -->
 			<div class="content-wrapper section--flex">
 				<!-- COLUMNA ORGANISMOS -->

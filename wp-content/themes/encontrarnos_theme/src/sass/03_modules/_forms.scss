@@ -1,27 +1,12 @@
 .form-wrapper {
     color: color(text);
     @include flex(row, space-between, flex-start);
-    @include desktop{
-
-    }
-    @include tablet{
-
-    }
-    @include mobile{
-        @include flex(column, space-between, flex-start);
-    }
-    &--rs{
-        margin-right: 15%;
-        @include flex(column, flex-start, flex-start);
-        h6{
-            margin: 0;
-        }
-    }
+    @include mobile {
+        @include flex(column, space-between, flex-start); }
     &--reverse{
         @include flex(row-reverse, space-between, flex-start);
         @include mobile{
-            @include flex(column, space-between, flex-start);
-        }
+            @include flex(column, space-between, flex-start); }
     }
     &--bg{
         color: color(background);
@@ -31,7 +16,6 @@
     &--white{
         color: color(background);
     }
-    
 }
 
 
@@ -41,52 +25,23 @@
         @extend %sub-sub-subtitles;
         font-weight: 700;
         @include desktop{
-            font-size: font-size-mq(sub-sub-title);
-        }
+            font-size: font-size-mq(sub-sub-title); }
         @include tablet{
-            font-size: font-size-mq(sub-sub-title);
-        }
+            font-size: font-size-mq(sub-sub-title); }
         @include mobile{
-            font-size: font-size-mq--mobile(sub-sub-title);
-        }
+            font-size: font-size-mq--mobile(sub-sub-title); }
     }
 }
 
 .wpforms-field-label{
     font-size: font-size(button-text) !important;
     font-weight: 500 !important;
-    @include desktop{
-        font-size: font-size-mq(button-text) !important;
-    }
-    @include tablet{
-        font-size: font-size-mq(button-text) !important;
-    }
-    @include mobile{
-        font-size: font-size-mq--mobile(button-text) !important;
-    }
-}
-
-.form{
-    width: 40% !important;
-    @include mobile{
-        width: 80% !important;
-    }
-    &__text--white{
-        color: color(background);    
-    }
-    &__content{
-        margin: auto;
-        width: 95%;
-        &--50w{
-            margin: 0 2%;
-            width: 50%;  
-            @include mobile{
-                width: 100% !important;
-            }
-        }
-
-    }
-
+    @include desktop {
+        font-size: font-size-mq(button-text) !important; }
+    @include tablet {
+        font-size: font-size-mq(button-text) !important; }
+    @include mobile {
+        font-size: font-size-mq--mobile(button-text) !important; }
 }
 
 .wpforms-field-large {
@@ -95,3 +50,22 @@
     &:hover {
         border-color: #F2AC45 !important; }
 }
+
+.form{
+    width: 40% !important;
+    @include mobile {
+        width: 80% !important; }
+    &__text--white {
+        color: color(background); }
+    &__content {
+        margin: auto;
+        width: 95%;
+        &--50w {
+            margin: 0 2%;
+            width: 50%;  
+            @include mobile {
+                width: 100% !important; }
+        }
+    }
+}
+

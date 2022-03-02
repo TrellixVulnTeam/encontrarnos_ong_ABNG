@@ -57,8 +57,8 @@ $img_alt = $img_data['alt'];
 		<!-- END LOOP -->
 
 		<!-- GLOSARIO WRAPPER -->
-		<div class="glosario-wrapper">
-			<img class= "glosario__img" src='
+		<div class="glosario-img-wrapper">
+			<img class= "glosario-img__img" src='
 			<?php
 			
 			// VARIABLES IMG GLOSARIO

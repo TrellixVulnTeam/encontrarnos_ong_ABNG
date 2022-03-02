@@ -1,5 +1,6 @@
-.section-bg {
-    &--01{
+.section {
+    &--bg-01{
+        padding: 5% 0;
         background-image: url(image(vector01));
         background-repeat: no-repeat;
         background-position: center;
@@ -12,7 +13,7 @@
 }
 
 .section {
-    &-bg--02 {
+    &--bg-02 {
         background-image: url(image(vector04));
         background-repeat: no-repeat;
         background-position: center;

@@ -28,16 +28,16 @@ $image_height = $image[2];
 		<div class="content-wrapper">
 			<div class="site-info">
 				<!-- FOOTER WRAPPER -->
-				<div class="footer-wrapper">
+				<div class="footer">
 					<!-- LOGO & RSS-->
-					<div class="footer-logo">
+					<div class="footer__logo">
 						<a href= " <?php echo home_url(); ?> " ><figure class= "logo">
 							<img src= "<?php echo $image[0] ?>" width= "<?php echo $image_width ?>" height= "<?php echo $image_height ?>">
 						</figure></a>
 
 						<p class="li--bold"> Seguinos </p>
 						<!-- RSS -->
-						<div class="footer-rss">
+						<div class="rss rss--footer">
 							<a  href="<?php the_field('facebook', 'options');?>"><i class="bi bi-facebook"></i></a>
 							<a href="<?php the_field('instagram', 'options');?>"><i class="bi bi-instagram"></i></a>
 							<a href="<?php the_field('twitter', 'options');?>"><i class="bi bi-twitter"></i></a>

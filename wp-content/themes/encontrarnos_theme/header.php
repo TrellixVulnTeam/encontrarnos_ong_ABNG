@@ -43,7 +43,7 @@ $image_height = $image[2];
 		</div>
 		<!-- END MENU MOBILE -->
 		<!-- RSS -->
-		<div class= "header-rss">
+		<div class= "rss rss--header">
 			<a  href= "<?php the_field('facebook', 'options');?>"><i class="bi bi-facebook"></i></a>
 			<a href= "<?php the_field('instagram', 'options');?>"><i class="bi bi-instagram"></i></a>
 			<a class= "link-padding" href="<?php the_field('twitter', 'options');?>"><i class="bi bi-twitter"></i></a>

@@ -1,0 +1,19 @@
+.rss {
+    &--header {
+        @include flex(row, flex-end, center); }
+    &--footer { 
+        margin:-5%; 
+        .bi {
+            color: color(primary);
+            &:hover {
+                transition: $link-transition;
+                color: lighten(color(primary), 10%); }
+        }
+    }
+    &--form {
+        margin-right: 15%;
+        @include flex(column, flex-start, flex-start);
+        h6 { 
+            margin: 0; }
+    }
+}

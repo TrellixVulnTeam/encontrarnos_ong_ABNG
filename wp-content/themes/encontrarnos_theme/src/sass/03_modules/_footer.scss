@@ -1,39 +1,35 @@
 html {
     background-color: color(secondary);
     footer {
-
-    background-color: color(secondary);
-}
+    background-color: color(secondary); }
 }
 
-.footer-wrapper{
+.footer {
     color: color(primary);
     margin: auto;
     padding: 4%;
     @include flex(row, center, flex-start);
-    @include tablet{
-        flex-wrap: wrap;
-    } 
-    @include mobile{
-        @include flex(column, center, center);
-    } 
-}
-
-.footer-logo{
-    margin: 0;
-    padding: 0;
-    @include flex(column, flex-start, center);
-    @include tablet{
-    margin-bottom: 5%; }
-    @include mobile{
-        margin-bottom: 5%; }
-    p{
-        color: color(primary);
-        margin-top: -7%;
-        @include tablet{
-            margin-top: 0; }
+    @include tablet {
+        flex-wrap: wrap; } 
+    @include mobile {
+        @include flex(column, center, center); } 
+        &__logo {
+            margin: 0;
+            padding: 0;
+            @include flex(column, flex-start, center);
+            @include tablet{
+                    margin-bottom: 5%; }
+            @include mobile{
+                    margin-bottom: 5%; }
+                p {
+                color: color(primary);
+                margin-top: -7%;
+                @include tablet{
+                        margin-top: 0; }
+        }
     }
 }
+
 
 .footer-rss{
     .bi {
@@ -71,4 +67,5 @@ html {
     @include mobile{
         display: none; }
 }
+
 
