@@ -80,7 +80,11 @@ $img_alt = $img_data['alt'];
 				if($query_sb->have_posts()): while ($query_sb->have_posts()) : $query_sb->the_post(); ?>
 				<!-- DETAILS -->
 					<details>
-						<summary class= "question-wrapper"> <?php the_title();?> <i class="bi bi-chevron-compact-down"></i> </summary>
+							<summary class= "question-wrapper"> <?php the_title();?> 				
+								<svg class="chevron-compact-down" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 2L14.75 14L27.5 2" stroke="#3A5743" stroke-width="5"/>
+								</svg>	
+							</summary>
 						<hr>
 						<div class="summary"> <?php the_content();?> </div>				
 					</details>
@@ -112,7 +116,11 @@ $img_alt = $img_data['alt'];
 					if($query_stm->have_posts()): while ($query_stm->have_posts()) : $query_stm->the_post(); ?>
 					<!-- DETAILS -->
 						<details>
-							<summary class= "question-wrapper"> <?php the_title();?> <i class="bi bi-chevron-compact-down"></i>	</summary>
+							<summary class= "question-wrapper"> <?php the_title();?> 				
+								<svg class="chevron-compact-down" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 2L14.75 14L27.5 2" stroke="#3A5743" stroke-width="5"/>
+								</svg>	
+							</summary>
 							<hr>
 							<div> <?php the_content();?> </div>				
 						</details>

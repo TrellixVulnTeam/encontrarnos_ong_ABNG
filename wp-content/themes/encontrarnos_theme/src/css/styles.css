@@ -1092,32 +1092,37 @@ nav {
     font-size: 1.3rem;
   }
 }
-.bi-chevron-compact-down {
+.bi:hover {
+  transition: all ease-in-out 0.3s;
+  color: #4e765b;
+}
+
+.chevron-compact-down {
   font-size: 2.3rem;
   font-weight: 900;
   color: #3A5743;
 }
 @media (min-width: 1049px) and (max-width: 1500px) {
-  .bi-chevron-compact-down {
+  .chevron-compact-down {
     font-size: 1.8rem;
   }
 }
 @media (min-width: 759px) and (max-width: 1049px) {
-  .bi-chevron-compact-down {
+  .chevron-compact-down {
     font-size: 1.8rem;
+    width: 15px;
+    height: 9px;
   }
 }
 @media (max-width: 759px) {
-  .bi-chevron-compact-down {
+  .chevron-compact-down {
     font-size: 1.3rem;
+    width: 15px;
+    height: 9px;
   }
 }
-.bi-chevron-compact-down:hover {
-  transition: all ease-in-out 0.3s;
-  color: #4e765b;
-}
 
-details[open] > summary .bi-chevron-compact-down {
+details[open] > summary .chevron-compact-down {
   transform: rotate(180deg);
   transition: all ease-in-out 0.3s;
 }
