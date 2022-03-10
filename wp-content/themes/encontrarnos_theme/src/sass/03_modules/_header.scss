@@ -65,8 +65,9 @@
 //LOGO
 
 .logo--menu{
+    width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 0 -5%;
     transition: all 1.5s ease-in-out;
     @include tablet {
         display: none; }

@@ -4,27 +4,37 @@ nav {
     position: sticky;
     z-index: 1;
     @include desktop {
-        padding-bottom: 2%; }
+        padding-bottom: 3%; }
     @include tablet {
-        padding-bottom: 2%; }
+        padding-bottom: 3%; }
     @include mobile {
+        padding-bottom: 3%;
     }
 }
 
 .main-navigation ul {
     margin-top: 2%;
+    margin-right: -45px;
     justify-content: flex-end;
+    @include tablet {
+        margin-right: 0px; }
     @include mobile{
+        margin-right: 0px;
         justify-content: center;
     }
 }
 
 .menu  li {
+    white-space: nowrap;
     margin-right: 2px;
     font-family: $font-secondary;
     font-weight: 500; 
+    @include tablet{
+        font-size: font-size-mq(text);
+    }
     @include mobile{
         font-size: font-size-mq(text);
+        white-space: normal;
     }
         a {
             padding: 0.1rem 0.5rem;
